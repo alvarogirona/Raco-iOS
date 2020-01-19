@@ -1,5 +1,5 @@
 //
-//  SubjectAlertTableViewCell.swift
+//  SubjectTableViewCell.swift
 //  Raco
 //
 //  Created by alvaro on 19/01/2020.
@@ -8,13 +8,15 @@
 
 import UIKit
 import RacoUIKit
+import RacoDomain
 
-class SubjectAlertTableViewCell: NiblessTableViewCell {
+class SubjectTableViewCell: NiblessTableViewCell {
 
     private var hierarchyNotReady = true
 
     // MARK: Views
-    private let alertTitleLabel: UILabel = {
+
+    private let subjectNameLabel: UILabel = {
         let label = UILabel()
 
         label.text = "asdf"
@@ -34,6 +36,13 @@ class SubjectAlertTableViewCell: NiblessTableViewCell {
     }
 
 
+    // MARK: Render
+
+    func renderSubject(subject: Subject) {
+        subjectNameLabel.text = subject.name
+    }
+
+
     // MARK: Hierarchy
     func makeHierarchy() {
         guard hierarchyNotReady else {
@@ -42,7 +51,7 @@ class SubjectAlertTableViewCell: NiblessTableViewCell {
 
         hierarchyNotReady = false
 
-        addSubview(alertTitleLabel)
+        addSubview(subjectNameLabel)
     }
 
     // MARK: Constraints
@@ -51,36 +60,35 @@ class SubjectAlertTableViewCell: NiblessTableViewCell {
     }
 
     private func activateConstraintsSubjectNameLabel() {
-        alertTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        subjectNameLabel.translatesAutoresizingMaskIntoConstraints = false
 
-        let leading = alertTitleLabel.leadingAnchor
+        let leading = subjectNameLabel.leadingAnchor
             .constraint(equalTo: leadingAnchor, constant: 10)
-        let trailing = alertTitleLabel.trailingAnchor
+        let trailing = subjectNameLabel.trailingAnchor
             .constraint(equalTo: trailingAnchor, constant: -10)
-        let top = alertTitleLabel.topAnchor
+        let top = subjectNameLabel.topAnchor
             .constraint(equalTo: topAnchor, constant: 10)
-        let bottom = alertTitleLabel.bottomAnchor
+        let bottom = subjectNameLabel.bottomAnchor
         .constraint(equalTo: bottomAnchor, constant: -10)
 
         NSLayoutConstraint.activate([leading, trailing, top, bottom])
     }
 
-
-    // MARK: Cell selected
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
 
 }
 
-
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 
-struct SubjectAlertTableViewCell_Preview: PreviewProvider {
+struct SubjectTableViewCell_Preview: PreviewProvider {
     static var previews: some View {
         UIViewPreview {
-            SubjectAlertTableViewCell(style: .default, reuseIdentifier: "")
+            SubjectTableViewCell(style: .default, reuseIdentifier: "")
         }.previewLayout(.fixed(width: 400, height: 60))
             .padding(10)
     }

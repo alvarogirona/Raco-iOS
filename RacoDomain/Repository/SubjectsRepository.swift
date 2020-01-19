@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import RxSwift
 
 public protocol SubjectsRepository {
-    
+    func getAll() -> Observable<[Subject]>
+    func loadInitialData() -> Completable
 }

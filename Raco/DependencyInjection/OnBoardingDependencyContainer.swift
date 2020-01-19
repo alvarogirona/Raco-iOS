@@ -12,9 +12,14 @@ import RacoDomain
 import RxSwift
 
 class OnBoardingDependencyContainer: SignedInViewControllerFactory {
+
     let authorizationCodeSubject: PublishSubject<String> = PublishSubject()
 
     private let platformDependencyContainer = PlatformDependencyContainer()
+
+    private lazy var signedInDependencyContainer = SignedInDependencyContainer(
+        platformDependencyContainer: self.platformDependencyContainer
+    )
 
     func makeLogInViewModel() -> LogInViewModel {
         return LogInViewModel(
@@ -35,33 +40,6 @@ class OnBoardingDependencyContainer: SignedInViewControllerFactory {
     }
 
     func makeSignedInViewController() -> SignedInViewController {
-        let signedInViewController = SignedInViewController(dependencyContainer: SignedInDependencyContainer())
-
-        /// TODO: Move to `signedInViewController`
-
-        let subjectsAlertsNavigationController = makeSubjectsAlertsNavigationController()
-        let subjectsVC = SubjectsViewController()
-        let userProfileVC = UserProfileViewController()
-
-        signedInViewController.viewControllers = [subjectsAlertsNavigationController, subjectsVC, userProfileVC]
-
-        return signedInViewController
-    }
-
-    private func makeSubjectsAlertsNavigationController() -> NiblessNavigationController {
-        let subjectsAlertsNavigationController = NiblessNavigationController()
-        subjectsAlertsNavigationController.tabBarItem = UITabBarItem(title: "Avisos", image: nil, tag: 0)
-        let subjectAlertsViewModel = SubjectAlertsViewModel()
-        let subjectsAlertsVC = SubjectsAlertsViewController(
-            viewModel: subjectAlertsViewModel,
-            rootView: SubjectAlertsView(viewModel: subjectAlertsViewModel)
-        )
-        subjectsAlertsNavigationController.viewControllers = [subjectsAlertsVC]
-
-        return subjectsAlertsNavigationController
-    }
-
-    func makeSubjectAlertsViewModel() {
-
+        signedInDependencyContainer.makeSignedInViewController()
     }
 }

@@ -9,15 +9,15 @@
 import Foundation
 
 public struct Subject : Codable {
-    var id: String
-    var url: String
-    var guide: String
-    var group: String
-    var acronym: String
-    var upcCode: Int
-    var semester: String
-    var credits: Double
-    var name: String
+    public let id: String
+    public let url: String?
+    public let guide: String?
+    public let group: String?
+    public let acronym: String?
+    public let upcCode: Int?
+    public let semester: String?
+    public let credits: Double?
+    public let name: String
 
     enum CodingKeys: String, CodingKey {
         case id = "id"

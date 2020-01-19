@@ -7,7 +7,13 @@
 //
 
 import Foundation
+import RxSwift
+import RacoDomain
 
 class SubjectAlertsViewModel {
-    
+
+    private let disposeBag = DisposeBag()
+    init () {
+    }
+
 }

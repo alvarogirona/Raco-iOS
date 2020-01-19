@@ -22,7 +22,11 @@ where R.RemoteItem == [Subject], C.RemoteItem == Subject {
         self.cacheDataSource = cacheDataSource
     }
 
-    func loadInitialData() -> Completable {
+    public func getAll() -> Observable<[Subject]> {
+        return cacheDataSource.cacheSubject
+    }
+
+    public func loadInitialData() -> Completable {
         remoteDataSource.loadData()
             .flatMapCompletable { (subjects) -> Completable in
                 return Completable.create { [unowned self] completable in

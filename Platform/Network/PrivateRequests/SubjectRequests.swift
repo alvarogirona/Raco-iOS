@@ -22,7 +22,20 @@ class SubjectRequests: SubjectService {
     func getAll() -> Single<[Subject]> {
         return Single.create { [unowned self] single in
 
-            self.sessionManager.request("")
+            self.sessionManager.request(Endpoints.subjects)
+                .responseData { (response) in
+                    switch (response.result) {
+                    case .success(let data):
+                        guard let parsedResponse = try? JSONDecoder().decode(SubjectsResponse.self, from: data) else {
+                            single(.error(NetworkError.parsingError))
+                            return
+                        }
+
+                        single(.success(parsedResponse.results))
+                    case .failure(let error):
+                        single(.error(error))
+                    }
+            }
 
             return Disposables.create()
         }

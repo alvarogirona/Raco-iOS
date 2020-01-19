@@ -87,6 +87,12 @@
 		38D956D523D404CF00A7E8DA /* SubjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956D423D404CF00A7E8DA /* SubjectService.swift */; };
 		38D956D723D4067000A7E8DA /* CacheDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956D623D4067000A7E8DA /* CacheDataSource.swift */; };
 		38D956D923D4076800A7E8DA /* SubjectsCacheDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956D823D4076800A7E8DA /* SubjectsCacheDataSource.swift */; };
+		38D956DB23D4237F00A7E8DA /* CacheDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956DA23D4237F00A7E8DA /* CacheDataSourceTests.swift */; };
+		38D956DE23D4CB5600A7E8DA /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956DD23D4CB5600A7E8DA /* Endpoints.swift */; };
+		38D956E023D4CD5500A7E8DA /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956DF23D4CD5500A7E8DA /* NetworkErrors.swift */; };
+		38D956E223D4D64400A7E8DA /* SubjectsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956E123D4D64400A7E8DA /* SubjectsResponse.swift */; };
+		38D956E523D4D7E000A7E8DA /* SubjectAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956E423D4D7E000A7E8DA /* SubjectAlert.swift */; };
+		38D956E723D4EBB600A7E8DA /* SubjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956E623D4EBB600A7E8DA /* SubjectTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -277,6 +283,12 @@
 		38D956D423D404CF00A7E8DA /* SubjectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectService.swift; sourceTree = "<group>"; };
 		38D956D623D4067000A7E8DA /* CacheDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheDataSource.swift; sourceTree = "<group>"; };
 		38D956D823D4076800A7E8DA /* SubjectsCacheDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsCacheDataSource.swift; sourceTree = "<group>"; };
+		38D956DA23D4237F00A7E8DA /* CacheDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheDataSourceTests.swift; sourceTree = "<group>"; };
+		38D956DD23D4CB5600A7E8DA /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		38D956DF23D4CD5500A7E8DA /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		38D956E123D4D64400A7E8DA /* SubjectsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsResponse.swift; sourceTree = "<group>"; };
+		38D956E423D4D7E000A7E8DA /* SubjectAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlert.swift; sourceTree = "<group>"; };
+		38D956E623D4EBB600A7E8DA /* SubjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +365,7 @@
 		386346E723CBD2EA008D7C37 /* SignedIn */ = {
 			isa = PBXGroup;
 			children = (
+				38D956E823D5096000A7E8DA /* Schedule */,
 				386346FA23CC07D4008D7C37 /* Subjects */,
 				386346F923CC07C9008D7C37 /* SubjectsAlerts */,
 				386346F823CC07C0008D7C37 /* UserProfile */,
@@ -574,6 +587,7 @@
 			children = (
 				38843A0E23CACECC00CA620E /* PlatformTests.swift */,
 				38843A1023CACECC00CA620E /* Info.plist */,
+				38D956DA23D4237F00A7E8DA /* CacheDataSourceTests.swift */,
 			);
 			path = PlatformTests;
 			sourceTree = "<group>";
@@ -581,12 +595,14 @@
 		38843A1F23CAFBBD00CA620E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				38D956E323D4D64A00A7E8DA /* ResponseModels */,
+				38D956DC23D4CB1800A7E8DA /* Alamofire */,
 				38D956D323D404C200A7E8DA /* Interfaces */,
 				38843A5723CBA43B00CA620E /* PublicRequests */,
-				38843A5423CBA33F00CA620E /* SessionManager */,
-				38843A3823CB8CE300CA620E /* RequestAdapter */,
 				38843A3523CB8C2C00CA620E /* PrivateRequests */,
 				38843A2023CAFC4700CA620E /* Auth */,
+				38D956DD23D4CB5600A7E8DA /* Endpoints.swift */,
+				38D956DF23D4CD5500A7E8DA /* NetworkErrors.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -628,6 +644,7 @@
 				38843A3123CB878800CA620E /* UserProfile.swift */,
 				38843A3323CB8B4600CA620E /* Subject.swift */,
 				38843A5A23CBA4AF00CA620E /* AuthResponse.swift */,
+				38D956E423D4D7E000A7E8DA /* SubjectAlert.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -703,6 +720,7 @@
 		38D71BEA23D3D56000198F7B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				38D956E623D4EBB600A7E8DA /* SubjectTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -746,6 +764,30 @@
 				38D956D423D404CF00A7E8DA /* SubjectService.swift */,
 			);
 			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		38D956DC23D4CB1800A7E8DA /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				38843A3823CB8CE300CA620E /* RequestAdapter */,
+				38843A5423CBA33F00CA620E /* SessionManager */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		38D956E323D4D64A00A7E8DA /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				38D956E123D4D64400A7E8DA /* SubjectsResponse.swift */,
+			);
+			path = ResponseModels;
+			sourceTree = "<group>";
+		};
+		38D956E823D5096000A7E8DA /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Schedule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1097,6 +1139,7 @@
 				3884399023CABB8500CA620E /* NiblessViewController.swift in Sources */,
 				386346E923CBD304008D7C37 /* SignedInViewController.swift in Sources */,
 				388439E223CABEAB00CA620E /* LogInViewModel.swift in Sources */,
+				38D956E723D4EBB600A7E8DA /* SubjectTableViewCell.swift in Sources */,
 				388439E023CABE2A00CA620E /* LogInView.swift in Sources */,
 				386346FC23CC07F9008D7C37 /* SubjectsViewController.swift in Sources */,
 				38D956C323D3F85700A7E8DA /* SubjectsViewModel.swift in Sources */,
@@ -1145,6 +1188,7 @@
 				38843A5B23CBA4AF00CA620E /* AuthResponse.swift in Sources */,
 				38D956C923D3F8B100A7E8DA /* UserProfileRepository.swift in Sources */,
 				38D956C723D3F89B00A7E8DA /* SubjectsAlertsRepository.swift in Sources */,
+				38D956E523D4D7E000A7E8DA /* SubjectAlert.swift in Sources */,
 				38D956C523D3F87F00A7E8DA /* SubjectsRepository.swift in Sources */,
 				38843A2923CB868600CA620E /* CredentialsRepository.swift in Sources */,
 			);
@@ -1165,6 +1209,7 @@
 				38843A4023CB8EB300CA620E /* KeyChainDataSource.swift in Sources */,
 				38D956D923D4076800A7E8DA /* SubjectsCacheDataSource.swift in Sources */,
 				38843A3E23CB8E3F00CA620E /* RemoteDataSource.swift in Sources */,
+				38D956E223D4D64400A7E8DA /* SubjectsResponse.swift in Sources */,
 				38843A3723CB8C7000CA620E /* SubjectRequests.swift in Sources */,
 				38D956D723D4067000A7E8DA /* CacheDataSource.swift in Sources */,
 				38843A4923CB92BE00CA620E /* PlatformDependencyContainer.swift in Sources */,
@@ -1176,8 +1221,10 @@
 				38843A4B23CB93B700CA620E /* CredentialsRemoteDataSource.swift in Sources */,
 				38D956CE23D3F99000A7E8DA /* SubjectsRemoteDataSource.swift in Sources */,
 				38843A2C23CB86F200CA620E /* CredentialsDataRepository.swift in Sources */,
+				38D956DE23D4CB5600A7E8DA /* Endpoints.swift in Sources */,
 				38D956D523D404CF00A7E8DA /* SubjectService.swift in Sources */,
 				38843A5923CBA45600CA620E /* AuthRequests.swift in Sources */,
+				38D956E023D4CD5500A7E8DA /* NetworkErrors.swift in Sources */,
 				38843A2423CB037600CA620E /* AuthUrls.swift in Sources */,
 				38D956D223D3FE3300A7E8DA /* NetworkModule.swift in Sources */,
 				38843A2E23CB870900CA620E /* CredentiaslKeyChainDataSource.swift in Sources */,
@@ -1189,6 +1236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38843A0F23CACECC00CA620E /* PlatformTests.swift in Sources */,
+				38D956DB23D4237F00A7E8DA /* CacheDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
