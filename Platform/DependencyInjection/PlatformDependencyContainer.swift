@@ -77,6 +77,10 @@ public class PlatformDependencyContainer {
 
     public lazy var subjectsRepository: SubjectsRepository = self.makeSubjectsDataRepository()
 
+    public func makeGetAllSubjectsUseCase() -> GetAllSubjectsUseCase {
+        return GetAllSubjectsUseCase(subjectsRepository: subjectsRepository)
+    }
+
     private func makeSubjectsDataRepository() -> SubjectsDataRepository<SubjectsRemoteDataSource, SubjectsCacheDataSource> {
         return SubjectsDataRepository<SubjectsRemoteDataSource, SubjectsCacheDataSource>(
             remoteDataSource: makeSubjectsRemoteDataSource(),

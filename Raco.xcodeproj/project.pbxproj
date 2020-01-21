@@ -59,8 +59,8 @@
 		38843A2923CB868600CA620E /* CredentialsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A2823CB868600CA620E /* CredentialsRepository.swift */; };
 		38843A2C23CB86F200CA620E /* CredentialsDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A2B23CB86F200CA620E /* CredentialsDataRepository.swift */; };
 		38843A2E23CB870900CA620E /* CredentiaslKeyChainDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A2D23CB870900CA620E /* CredentiaslKeyChainDataSource.swift */; };
-		38843A3223CB878800CA620E /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A3123CB878800CA620E /* UserProfile.swift */; };
-		38843A3423CB8B4600CA620E /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A3323CB8B4600CA620E /* Subject.swift */; };
+		38843A3223CB878800CA620E /* RemoteUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A3123CB878800CA620E /* RemoteUserProfile.swift */; };
+		38843A3423CB8B4600CA620E /* RemoteSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A3323CB8B4600CA620E /* RemoteSubject.swift */; };
 		38843A3723CB8C7000CA620E /* SubjectRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A3623CB8C7000CA620E /* SubjectRequests.swift */; };
 		38843A3A23CB8CEF00CA620E /* AuthRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A3923CB8CEF00CA620E /* AuthRequestAdapter.swift */; };
 		38843A3E23CB8E3F00CA620E /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A3D23CB8E3F00CA620E /* RemoteDataSource.swift */; };
@@ -72,6 +72,10 @@
 		38843A5623CBA34F00CA620E /* AuthedSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A5523CBA34F00CA620E /* AuthedSessionManager.swift */; };
 		38843A5923CBA45600CA620E /* AuthRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A5823CBA45600CA620E /* AuthRequests.swift */; };
 		38843A5B23CBA4AF00CA620E /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A5A23CBA4AF00CA620E /* AuthResponse.swift */; };
+		38D62C6E23D77ED300649E08 /* SubjectsAlertsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C6D23D77ED300649E08 /* SubjectsAlertsMapper.swift */; };
+		38D62C7123D77FAC00649E08 /* SubjectAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C7023D77FAC00649E08 /* SubjectAlerts.swift */; };
+		38D62C7323D7863D00649E08 /* GetAllSubjectsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C7223D7863D00649E08 /* GetAllSubjectsUseCase.swift */; };
+		38D62C7523D7864900649E08 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C7423D7864900649E08 /* UseCase.swift */; };
 		38D71BED23D3D59A00198F7B /* SubjectAlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D71BEC23D3D59A00198F7B /* SubjectAlertTableViewCell.swift */; };
 		38D71BEF23D3D5AC00198F7B /* NiblessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D71BEE23D3D5AC00198F7B /* NiblessTableViewCell.swift */; };
 		38D956B923D3F54500A7E8DA /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 38D956B823D3F54500A7E8DA /* RxSwift */; };
@@ -91,8 +95,11 @@
 		38D956DE23D4CB5600A7E8DA /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956DD23D4CB5600A7E8DA /* Endpoints.swift */; };
 		38D956E023D4CD5500A7E8DA /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956DF23D4CD5500A7E8DA /* NetworkErrors.swift */; };
 		38D956E223D4D64400A7E8DA /* SubjectsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956E123D4D64400A7E8DA /* SubjectsResponse.swift */; };
-		38D956E523D4D7E000A7E8DA /* SubjectAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956E423D4D7E000A7E8DA /* SubjectAlert.swift */; };
+		38D956E523D4D7E000A7E8DA /* RemoteSubjectAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956E423D4D7E000A7E8DA /* RemoteSubjectAlert.swift */; };
 		38D956E723D4EBB600A7E8DA /* SubjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956E623D4EBB600A7E8DA /* SubjectTableViewCell.swift */; };
+		38D956EA23D515A800A7E8DA /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956E923D515A800A7E8DA /* ScheduleViewController.swift */; };
+		38D956EC23D515BC00A7E8DA /* ScheduleDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956EB23D515BC00A7E8DA /* ScheduleDayView.swift */; };
+		38D956EE23D515C900A7E8DA /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956ED23D515C900A7E8DA /* ScheduleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -260,8 +267,8 @@
 		38843A2823CB868600CA620E /* CredentialsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsRepository.swift; sourceTree = "<group>"; };
 		38843A2B23CB86F200CA620E /* CredentialsDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsDataRepository.swift; sourceTree = "<group>"; };
 		38843A2D23CB870900CA620E /* CredentiaslKeyChainDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentiaslKeyChainDataSource.swift; sourceTree = "<group>"; };
-		38843A3123CB878800CA620E /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
-		38843A3323CB8B4600CA620E /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		38843A3123CB878800CA620E /* RemoteUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserProfile.swift; sourceTree = "<group>"; };
+		38843A3323CB8B4600CA620E /* RemoteSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteSubject.swift; sourceTree = "<group>"; };
 		38843A3623CB8C7000CA620E /* SubjectRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectRequests.swift; sourceTree = "<group>"; };
 		38843A3923CB8CEF00CA620E /* AuthRequestAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestAdapter.swift; sourceTree = "<group>"; };
 		38843A3D23CB8E3F00CA620E /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
@@ -271,6 +278,10 @@
 		38843A5523CBA34F00CA620E /* AuthedSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthedSessionManager.swift; sourceTree = "<group>"; };
 		38843A5823CBA45600CA620E /* AuthRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequests.swift; sourceTree = "<group>"; };
 		38843A5A23CBA4AF00CA620E /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		38D62C6D23D77ED300649E08 /* SubjectsAlertsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsAlertsMapper.swift; sourceTree = "<group>"; };
+		38D62C7023D77FAC00649E08 /* SubjectAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlerts.swift; sourceTree = "<group>"; };
+		38D62C7223D7863D00649E08 /* GetAllSubjectsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllSubjectsUseCase.swift; sourceTree = "<group>"; };
+		38D62C7423D7864900649E08 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		38D71BEC23D3D59A00198F7B /* SubjectAlertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlertTableViewCell.swift; sourceTree = "<group>"; };
 		38D71BEE23D3D5AC00198F7B /* NiblessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessTableViewCell.swift; sourceTree = "<group>"; };
 		38D956C223D3F85700A7E8DA /* SubjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsViewModel.swift; sourceTree = "<group>"; };
@@ -287,8 +298,11 @@
 		38D956DD23D4CB5600A7E8DA /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		38D956DF23D4CD5500A7E8DA /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		38D956E123D4D64400A7E8DA /* SubjectsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsResponse.swift; sourceTree = "<group>"; };
-		38D956E423D4D7E000A7E8DA /* SubjectAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlert.swift; sourceTree = "<group>"; };
+		38D956E423D4D7E000A7E8DA /* RemoteSubjectAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteSubjectAlert.swift; sourceTree = "<group>"; };
 		38D956E623D4EBB600A7E8DA /* SubjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTableViewCell.swift; sourceTree = "<group>"; };
+		38D956E923D515A800A7E8DA /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		38D956EB23D515BC00A7E8DA /* ScheduleDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDayView.swift; sourceTree = "<group>"; };
+		38D956ED23D515C900A7E8DA /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -520,6 +534,8 @@
 		388439D823CABCC200CA620E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				38D62C6F23D77F7F00649E08 /* Model */,
+				38D62C6C23D77EC000649E08 /* Mappers */,
 				388439DB23CABD9A00CA620E /* OnBoarding */,
 				386346E723CBD2EA008D7C37 /* SignedIn */,
 			);
@@ -641,10 +657,10 @@
 		38843A3023CB876E00CA620E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				38843A3123CB878800CA620E /* UserProfile.swift */,
-				38843A3323CB8B4600CA620E /* Subject.swift */,
+				38843A3123CB878800CA620E /* RemoteUserProfile.swift */,
+				38843A3323CB8B4600CA620E /* RemoteSubject.swift */,
 				38843A5A23CBA4AF00CA620E /* AuthResponse.swift */,
-				38D956E423D4D7E000A7E8DA /* SubjectAlert.swift */,
+				38D956E423D4D7E000A7E8DA /* RemoteSubjectAlert.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -717,6 +733,22 @@
 			path = PublicRequests;
 			sourceTree = "<group>";
 		};
+		38D62C6C23D77EC000649E08 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				38D62C6D23D77ED300649E08 /* SubjectsAlertsMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		38D62C6F23D77F7F00649E08 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38D62C7023D77FAC00649E08 /* SubjectAlerts.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		38D71BEA23D3D56000198F7B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -747,6 +779,7 @@
 			isa = PBXGroup;
 			children = (
 				38D956D023D3FA7C00A7E8DA /* Subjects */,
+				38D62C7423D7864900649E08 /* UseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -754,6 +787,7 @@
 		38D956D023D3FA7C00A7E8DA /* Subjects */ = {
 			isa = PBXGroup;
 			children = (
+				38D62C7223D7863D00649E08 /* GetAllSubjectsUseCase.swift */,
 			);
 			path = Subjects;
 			sourceTree = "<group>";
@@ -786,6 +820,9 @@
 		38D956E823D5096000A7E8DA /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				38D956E923D515A800A7E8DA /* ScheduleViewController.swift */,
+				38D956EB23D515BC00A7E8DA /* ScheduleDayView.swift */,
+				38D956ED23D515C900A7E8DA /* ScheduleViewModel.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -1125,11 +1162,14 @@
 			files = (
 				3884399223CABB9200CA620E /* NiblessNavigationController.swift in Sources */,
 				3863470423CC0B85008D7C37 /* SubjectAlertsViewModel.swift in Sources */,
+				38D62C7123D77FAC00649E08 /* SubjectAlerts.swift in Sources */,
 				3884396A23CABA4600CA620E /* ViewController.swift in Sources */,
 				38D71BED23D3D59A00198F7B /* SubjectAlertTableViewCell.swift in Sources */,
+				38D956EE23D515C900A7E8DA /* ScheduleViewModel.swift in Sources */,
 				386346FE23CC0805008D7C37 /* SubjectsAlertsViewController.swift in Sources */,
 				388439DA23CABD9700CA620E /* LogInViewController.swift in Sources */,
 				386346F523CC0551008D7C37 /* SignedInRootView.swift in Sources */,
+				38D62C6E23D77ED300649E08 /* SubjectsAlertsMapper.swift in Sources */,
 				3863470223CC0B57008D7C37 /* SubjectAlertsView.swift in Sources */,
 				3863470023CC080E008D7C37 /* UserProfileViewController.swift in Sources */,
 				388439DE23CABE0A00CA620E /* OnBoardingDependencyContainer.swift in Sources */,
@@ -1137,7 +1177,9 @@
 				388439E823CAC09200CA620E /* UIViewPreview.swift in Sources */,
 				3863470623CC0DCC008D7C37 /* UserProfileRootView.swift in Sources */,
 				3884399023CABB8500CA620E /* NiblessViewController.swift in Sources */,
+				38D956EC23D515BC00A7E8DA /* ScheduleDayView.swift in Sources */,
 				386346E923CBD304008D7C37 /* SignedInViewController.swift in Sources */,
+				38D956EA23D515A800A7E8DA /* ScheduleViewController.swift in Sources */,
 				388439E223CABEAB00CA620E /* LogInViewModel.swift in Sources */,
 				38D956E723D4EBB600A7E8DA /* SubjectTableViewCell.swift in Sources */,
 				388439E023CABE2A00CA620E /* LogInView.swift in Sources */,
@@ -1183,12 +1225,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38843A3223CB878800CA620E /* UserProfile.swift in Sources */,
-				38843A3423CB8B4600CA620E /* Subject.swift in Sources */,
+				38843A3223CB878800CA620E /* RemoteUserProfile.swift in Sources */,
+				38D62C7323D7863D00649E08 /* GetAllSubjectsUseCase.swift in Sources */,
+				38843A3423CB8B4600CA620E /* RemoteSubject.swift in Sources */,
 				38843A5B23CBA4AF00CA620E /* AuthResponse.swift in Sources */,
 				38D956C923D3F8B100A7E8DA /* UserProfileRepository.swift in Sources */,
+				38D62C7523D7864900649E08 /* UseCase.swift in Sources */,
 				38D956C723D3F89B00A7E8DA /* SubjectsAlertsRepository.swift in Sources */,
-				38D956E523D4D7E000A7E8DA /* SubjectAlert.swift in Sources */,
+				38D956E523D4D7E000A7E8DA /* RemoteSubjectAlert.swift in Sources */,
 				38D956C523D3F87F00A7E8DA /* SubjectsRepository.swift in Sources */,
 				38843A2923CB868600CA620E /* CredentialsRepository.swift in Sources */,
 			);
@@ -1621,7 +1665,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RacoDomain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1653,7 +1697,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RacoDomain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1723,7 +1767,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Platform/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1753,7 +1797,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Platform/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

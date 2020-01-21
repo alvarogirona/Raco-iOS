@@ -12,9 +12,9 @@ import RacoDomain
 
 class SubjectsCacheDataSource: CacheDataSource {
 
-    typealias RemoteItem = Subject
+    typealias RemoteItem = RemoteSubject
 
-    var cacheSubject: BehaviorSubject<[Subject]> = BehaviorSubject(value: [])
+    var cacheSubject: BehaviorSubject<[RemoteSubject]> = BehaviorSubject(value: [])
 
-    var cache: [Subject] = []
+    var cache: [RemoteSubject] = []
 }

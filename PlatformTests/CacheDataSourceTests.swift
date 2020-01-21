@@ -31,9 +31,9 @@ class CacheDataSourceTests: XCTestCase {
         XCTAssert(cacheDataSource.cache.count == 0)
     }
 
-    func buildDummySubjects() -> [Subject] {
+    func buildDummySubjects() -> [RemoteSubject] {
         return [
-            Subject(id: "1",
+            RemoteSubject(id: "1",
                     url: "https://raco.fib.upc.edu",
                     guide: "https://raco.fib.upc.edu",
                     group: "1",

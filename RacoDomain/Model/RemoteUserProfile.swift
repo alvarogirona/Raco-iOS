@@ -8,6 +8,6 @@
 
 import Foundation
 
-public struct UserProfile {
+public struct RemoteUserProfile {
     var name: String
 }

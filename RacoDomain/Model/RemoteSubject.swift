@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Subject : Codable {
+public struct RemoteSubject : Codable {
     public let id: String
     public let url: String?
     public let guide: String?

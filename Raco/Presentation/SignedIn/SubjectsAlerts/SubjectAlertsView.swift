@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import RacoDomain
 
 class SubjectAlertsView: NiblessView {
 
     var hierarchyNotReady = true
 
-    private let viewModel: SubjectAlertsViewModel
+    private let viewModel: SubjectAlertsViewModel<GetAllSubjectsUseCase>
 
     // MARK: Views
     var subjectAlertsTableView: UITableView = {
@@ -24,7 +25,7 @@ class SubjectAlertsView: NiblessView {
     // MARK: init
     init (
         frame: CGRect = .zero,
-        viewModel: SubjectAlertsViewModel
+        viewModel: SubjectAlertsViewModel<GetAllSubjectsUseCase>
     ) {
         self.viewModel = viewModel
         super.init(frame: frame)

@@ -11,5 +11,5 @@ import RacoDomain
 
 struct SubjectsResponse: Codable {
     let count: Int
-    let results: [Subject]
+    let results: [RemoteSubject]
 }

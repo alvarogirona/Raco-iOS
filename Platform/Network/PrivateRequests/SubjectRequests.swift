@@ -19,7 +19,7 @@ class SubjectRequests: SubjectService {
         self.sessionManager = sessionManager
     }
 
-    func getAll() -> Single<[Subject]> {
+    func getAll() -> Single<[RemoteSubject]> {
         return Single.create { [unowned self] single in
 
             self.sessionManager.request(Endpoints.subjects)

@@ -9,14 +9,14 @@
 import Foundation
 
 
-struct SubjectAlert: Codable {
-    let id: Int
-    let title: String
-    let subjectCode: String
-    let text: String
-    let insertionDate: String
-    let updatedDate: String
-    let expirationDate: String
+public struct RemoteSubjectAlert: Codable {
+    public let id: Int
+    public let title: String
+    public let subjectCode: String
+    public let text: String
+    public let insertionDate: String
+    public let updatedDate: String
+    public let expirationDate: String
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -29,6 +29,6 @@ struct SubjectAlert: Codable {
     }
 }
 
-struct SubjectAttachments: Codable {
+public struct RemoteSubjectAttachment: Codable {
 
 }

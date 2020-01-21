@@ -11,7 +11,7 @@ import RacoDomain
 import RxSwift
 
 class SubjectsDataRepository<R: RemoteDataSource, C: CacheDataSource>: SubjectsRepository
-where R.RemoteItem == [Subject], C.RemoteItem == Subject {
+where R.RemoteItem == [RemoteSubject], C.RemoteItem == RemoteSubject {
 
     private let remoteDataSource: R
     private let cacheDataSource: C
@@ -22,7 +22,7 @@ where R.RemoteItem == [Subject], C.RemoteItem == Subject {
         self.cacheDataSource = cacheDataSource
     }
 
-    public func getAll() -> Observable<[Subject]> {
+    public func getAll() -> Observable<[RemoteSubject]> {
         return cacheDataSource.cacheSubject
     }
 

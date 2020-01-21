@@ -13,14 +13,14 @@ import RacoDomain
 class SubjectsViewModel {
 
     // MARK: Outputs
-    var subjectsObservable: Observable<[Subject]> {
+    var subjectsObservable: Observable<[RemoteSubject]> {
         get {
             return subjectsSubject.asObservable()
         }
     }
 
     // MARK: State
-    private let subjectsSubject: BehaviorSubject<[Subject]> = BehaviorSubject(value: [])
+    private let subjectsSubject: BehaviorSubject<[RemoteSubject]> = BehaviorSubject(value: [])
 
     // MARK: Dependencies
     private let subjectsRepository: SubjectsRepository

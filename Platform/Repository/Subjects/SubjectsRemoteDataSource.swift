@@ -13,7 +13,7 @@ import Alamofire
 
 class SubjectsRemoteDataSource: RemoteDataSource {
 
-    typealias RemoteItem = [Subject]
+    typealias RemoteItem = [RemoteSubject]
 
     private let subjectRequests: SubjectRequests
 
@@ -21,7 +21,7 @@ class SubjectsRemoteDataSource: RemoteDataSource {
         self.subjectRequests = subjectRequests
     }
 
-    func loadData() -> Single<[Subject]> {
+    func loadData() -> Single<[RemoteSubject]> {
         return subjectRequests.getAll()
     }
 }

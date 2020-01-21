@@ -10,6 +10,6 @@ import Foundation
 import RxSwift
 
 public protocol SubjectsRepository {
-    func getAll() -> Observable<[Subject]>
+    func getAll() -> Observable<[RemoteSubject]>
     func loadInitialData() -> Completable
 }

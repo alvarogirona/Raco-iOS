@@ -32,22 +32,24 @@ class SubjectsRootView: NiblessView {
         }
         
         hierarchyNotReady = false
-        
+
+        backgroundColor = UIColor.systemBackground
+
         makeHierarchy()
         activateConstraints()
     }
-    
+
     private func makeHierarchy() {
         addSubview(tableView)
     }
-    
+
     private func activateConstraints() {
         activateTableViewContraints()
     }
-    
+
     private func activateTableViewContraints() {
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        
+
         let leading = tableView.leadingAnchor
             .constraint(equalTo: leadingAnchor)
         let trailing = tableView.trailingAnchor
@@ -56,9 +58,9 @@ class SubjectsRootView: NiblessView {
             .constraint(equalTo: safeAreaLayoutGuide.topAnchor)
         let bottom = tableView.bottomAnchor
             .constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
-        
+
         NSLayoutConstraint.activate([leading, trailing, top, bottom])
     }
-    
-    
+
+
 }

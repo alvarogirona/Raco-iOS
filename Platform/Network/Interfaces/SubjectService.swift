@@ -11,5 +11,5 @@ import RxSwift
 import RacoDomain
 
 protocol SubjectService {
-    func getAll() -> Single<[Subject]>
+    func getAll() -> Single<[RemoteSubject]>
 }

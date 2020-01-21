@@ -7,6 +7,7 @@
 //
 
 import Platform
+import RacoDomain
 import UIKit
 
 class SignedInDependencyContainer {
@@ -25,35 +26,21 @@ class SignedInDependencyContainer {
         )
 
         let subjectsAlertsNavigationController = makeSubjectsAlertsNavigationController()
+        let scheduleNavigationController = makeScheduleNavigationController(scheduleViewController: makeScheduleViewController())
         let subjectsNavigationController = makeSubjectsNavigationController(
             subjectsViewController: makeSubjectsViewController()
         )
         let userProfileNavigationController = makeUserProfileNavigationController(userProfileViewController: makeUserProfileViewController())
 
-
         signedInViewController.viewControllers = [
             subjectsAlertsNavigationController,
+            scheduleNavigationController,
             subjectsNavigationController,
             userProfileNavigationController
         ]
 
         return signedInViewController
     }
-
-    // MARK: User profile
-    private func makeUserProfileNavigationController(userProfileViewController: UserProfileViewController) -> NiblessNavigationController {
-        let navigationController = NiblessNavigationController()
-
-        navigationController.tabBarItem = UITabBarItem(title: "Usuario", image: UIImage(named: "person.fill"), tag: 2)
-        navigationController.viewControllers = [userProfileViewController]
-
-        return navigationController
-    }
-
-    private func makeUserProfileViewController() -> UserProfileViewController {
-        return UserProfileViewController()
-    }
-
 
     // MARK: Subject alerts
     private func makeSubjectsAlertsNavigationController() -> NiblessNavigationController {
@@ -69,19 +56,35 @@ class SignedInDependencyContainer {
         return subjectsAlertsNavigationController
     }
 
+    // MARK: Schedule
+
+    func makeScheduleNavigationController(scheduleViewController: ScheduleViewController) -> NiblessNavigationController {
+        let navigationController = NiblessNavigationController()
+
+        navigationController.tabBarItem = UITabBarItem(title: "Horario", image: UIImage(named: "calendar"), tag: 1)
+        navigationController.viewControllers = [scheduleViewController]
+
+        return navigationController
+    }
+
+    func makeScheduleViewController() -> ScheduleViewController {
+        return ScheduleViewController()
+    }
+
+    // MARK: Subjects
+
     func makeSubjectsNavigationController(
         subjectsViewController: SubjectsViewController
     ) -> NiblessNavigationController {
 
         let navigationController = NiblessNavigationController()
-        navigationController.tabBarItem = UITabBarItem(title: "Asignaturas", image: UIImage(named: "list.dash"), tag: 1)
+        navigationController.tabBarItem = UITabBarItem(title: "Asignaturas", image: UIImage(named: "list.dash"), tag: 2)
         navigationController.viewControllers = [subjectsViewController]
 
         return navigationController
     }
 
 
-    // MARK: Subjects
     func makeSubjectsViewController() -> SubjectsViewController {
         let subjectsViewModel = makeSubjectsViewModel()
         let subjectsVC = SubjectsViewController(
@@ -95,12 +98,27 @@ class SignedInDependencyContainer {
         return SubjectsRootView(viewModel: subjectsViewModel)
     }
 
+    // MARK: User profile
+    private func makeUserProfileNavigationController(userProfileViewController: UserProfileViewController) -> NiblessNavigationController {
+        let navigationController = NiblessNavigationController()
+
+        navigationController.tabBarItem = UITabBarItem(title: "Usuario", image: UIImage(named: "person.fill"), tag: 3)
+        navigationController.viewControllers = [userProfileViewController]
+
+        return navigationController
+    }
+
+    private func makeUserProfileViewController() -> UserProfileViewController {
+        return UserProfileViewController()
+    }
+
+
     // MARK: - ViewModels
     func makeSubjectsViewModel() -> SubjectsViewModel {
         return SubjectsViewModel(subjectsRepository: platformDependencyContainer.subjectsRepository)
     }
 
-    func makeSubjectAlertsViewModel() -> SubjectAlertsViewModel {
-        return SubjectAlertsViewModel()
+    func makeSubjectAlertsViewModel() -> SubjectAlertsViewModel<GetAllSubjectsUseCase> {
+        return SubjectAlertsViewModel(getAllSubjectsUseCase: platformDependencyContainer.makeGetAllSubjectsUseCase())
     }
 }

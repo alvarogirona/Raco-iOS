@@ -38,7 +38,7 @@ class SubjectTableViewCell: NiblessTableViewCell {
 
     // MARK: Render
 
-    func renderSubject(subject: Subject) {
+    func renderSubject(subject: RemoteSubject) {
         subjectNameLabel.text = subject.name
     }
 

@@ -12,7 +12,8 @@ class UserProfileViewController: NiblessViewController {
 
     override init() {
         super.init()
-        self.tabBarItem = UITabBarItem(title: "Usuario", image: nil, tag: 2)
+
+        self.navigationItem.title = "Usuario"
     }
 
     override func viewDidLoad() {

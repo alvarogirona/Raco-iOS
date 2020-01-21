@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import RacoDomain
 
 class SubjectsAlertsViewController: NiblessViewController {
 
-    private let viewModel: SubjectAlertsViewModel
+    private let viewModel: SubjectAlertsViewModel<GetAllSubjectsUseCase>
     private let alertsView: SubjectAlertsView
 
     override func viewDidLoad() {
@@ -19,7 +20,7 @@ class SubjectsAlertsViewController: NiblessViewController {
         self.navigationItem.title = "Avisos"
     }
 
-    init (viewModel: SubjectAlertsViewModel,
+    init (viewModel: SubjectAlertsViewModel<GetAllSubjectsUseCase>,
           rootView: SubjectAlertsView) {
         self.viewModel = viewModel
         self.alertsView = rootView
@@ -32,5 +33,5 @@ class SubjectsAlertsViewController: NiblessViewController {
 }
 
 protocol AlertsDependencyContainer {
-    func makeAlertsViewModel() -> SubjectAlertsViewModel
+    func makeAlertsViewModel() -> SubjectAlertsViewModel<GetAllSubjectsUseCase>
 }
