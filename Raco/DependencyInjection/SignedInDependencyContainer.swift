@@ -68,7 +68,11 @@ class SignedInDependencyContainer {
     }
 
     func makeScheduleViewController() -> ScheduleViewController {
-        return ScheduleViewController()
+        return ScheduleViewController(viewModel: makeScheduleViewModel())
+    }
+
+    private func makeScheduleViewModel() -> ScheduleViewModel {
+        return ScheduleViewModel()
     }
 
     // MARK: Subjects

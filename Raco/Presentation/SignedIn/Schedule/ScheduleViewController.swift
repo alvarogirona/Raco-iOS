@@ -10,10 +10,23 @@ import UIKit
 
 class ScheduleViewController: NiblessViewController {
 
+    private let viewModel: ScheduleViewModel
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.title = "Horario"
+    }
+
+    init (viewModel: ScheduleViewModel) {
+        self.viewModel = viewModel
+
+        super.init()
+
+        let scheduleDayView = ScheduleDayView(schedule: [1,2,2,1,4])
+
+        scheduleDayView.frame = view.frame
+        view.addSubview(scheduleDayView)
     }
     
 

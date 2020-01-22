@@ -81,6 +81,7 @@
 		38D62C7D23D7A90600649E08 /* SubjectAlertsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C7C23D7A90600649E08 /* SubjectAlertsRemoteDataSource.swift */; };
 		38D62C7F23D7A91D00649E08 /* SubjectAlertsCacheDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C7E23D7A91D00649E08 /* SubjectAlertsCacheDataSource.swift */; };
 		38D62C8123D7B32900649E08 /* SubjectAlertsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C8023D7B32900649E08 /* SubjectAlertsResponse.swift */; };
+		38D62C8423D7DEB400649E08 /* StackView+removeAllArrangedSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C8323D7DEB400649E08 /* StackView+removeAllArrangedSubviews.swift */; };
 		38D71BED23D3D59A00198F7B /* SubjectAlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D71BEC23D3D59A00198F7B /* SubjectAlertTableViewCell.swift */; };
 		38D71BEF23D3D5AC00198F7B /* NiblessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D71BEE23D3D5AC00198F7B /* NiblessTableViewCell.swift */; };
 		38D956B923D3F54500A7E8DA /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 38D956B823D3F54500A7E8DA /* RxSwift */; };
@@ -292,6 +293,7 @@
 		38D62C7C23D7A90600649E08 /* SubjectAlertsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlertsRemoteDataSource.swift; sourceTree = "<group>"; };
 		38D62C7E23D7A91D00649E08 /* SubjectAlertsCacheDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlertsCacheDataSource.swift; sourceTree = "<group>"; };
 		38D62C8023D7B32900649E08 /* SubjectAlertsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlertsResponse.swift; sourceTree = "<group>"; };
+		38D62C8323D7DEB400649E08 /* StackView+removeAllArrangedSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView+removeAllArrangedSubviews.swift"; sourceTree = "<group>"; };
 		38D71BEC23D3D59A00198F7B /* SubjectAlertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlertTableViewCell.swift; sourceTree = "<group>"; };
 		38D71BEE23D3D5AC00198F7B /* NiblessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessTableViewCell.swift; sourceTree = "<group>"; };
 		38D956C223D3F85700A7E8DA /* SubjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsViewModel.swift; sourceTree = "<group>"; };
@@ -501,6 +503,7 @@
 		3884399923CABBBC00CA620E /* RacoUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				38D62C8223D7DEA000649E08 /* Extensions */,
 				388439F723CAC29800CA620E /* Styles */,
 				388439F623CAC28800CA620E /* Colors */,
 				388439E323CABFAB00CA620E /* UIKitPreviews */,
@@ -776,6 +779,14 @@
 				38D62C7E23D7A91D00649E08 /* SubjectAlertsCacheDataSource.swift */,
 			);
 			path = SubjectAlerts;
+			sourceTree = "<group>";
+		};
+		38D62C8223D7DEA000649E08 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				38D62C8323D7DEB400649E08 /* StackView+removeAllArrangedSubviews.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		38D71BEA23D3D56000198F7B /* Cell */ = {
@@ -1238,6 +1249,7 @@
 				38D71BEF23D3D5AC00198F7B /* NiblessTableViewCell.swift in Sources */,
 				388439F923CAC2D400CA620E /* UIView+GradientBackground.swift in Sources */,
 				386346F723CC0661008D7C37 /* NiblessTabBarController.swift in Sources */,
+				38D62C8423D7DEB400649E08 /* StackView+removeAllArrangedSubviews.swift in Sources */,
 				388439E523CABFCA00CA620E /* UIViewPreview.swift in Sources */,
 				388439F523CAC28500CA620E /* Colors.swift in Sources */,
 				388439E723CABFDE00CA620E /* UIViewControllerPreview.swift in Sources */,
