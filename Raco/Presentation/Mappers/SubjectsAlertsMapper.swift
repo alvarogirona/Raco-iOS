@@ -20,7 +20,7 @@ class SubjectsAlertsMapper {
 
             return SubjectAlerts(
                 subjectame: remoteSubject.name,
-                alerts: subjectAlerts)
+                alerts: Array<SubjectAlert>(subjectAlerts.prefix(5)))
         }
     }
 

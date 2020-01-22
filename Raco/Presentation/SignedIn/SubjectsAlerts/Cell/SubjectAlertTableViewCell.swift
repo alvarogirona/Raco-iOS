@@ -23,6 +23,7 @@ class SubjectAlertTableViewCell: NiblessTableViewCell {
     }()
 
     // MARK: Init
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         makeHierarchy()
@@ -33,8 +34,15 @@ class SubjectAlertTableViewCell: NiblessTableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: Render
+
+    func renderSubjectAlert(subjectAlert: SubjectAlert) {
+        alertTitleLabel.text = subjectAlert.title
+    }
+
 
     // MARK: Hierarchy
+
     func makeHierarchy() {
         guard hierarchyNotReady else {
             return
@@ -46,6 +54,7 @@ class SubjectAlertTableViewCell: NiblessTableViewCell {
     }
 
     // MARK: Constraints
+
     func activateConstraintsCellView() {
         activateConstraintsSubjectNameLabel()
     }
@@ -67,6 +76,7 @@ class SubjectAlertTableViewCell: NiblessTableViewCell {
 
 
     // MARK: Cell selected
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

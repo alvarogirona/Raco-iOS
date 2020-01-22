@@ -76,6 +76,11 @@
 		38D62C7123D77FAC00649E08 /* SubjectAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C7023D77FAC00649E08 /* SubjectAlerts.swift */; };
 		38D62C7323D7863D00649E08 /* GetAllSubjectsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C7223D7863D00649E08 /* GetAllSubjectsUseCase.swift */; };
 		38D62C7523D7864900649E08 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C7423D7864900649E08 /* UseCase.swift */; };
+		38D62C7823D7A54C00649E08 /* GetAllSubjectAlertsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C7723D7A54C00649E08 /* GetAllSubjectAlertsUseCase.swift */; };
+		38D62C7B23D7A89200649E08 /* SubjectAlertsDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C7A23D7A89200649E08 /* SubjectAlertsDataRepository.swift */; };
+		38D62C7D23D7A90600649E08 /* SubjectAlertsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C7C23D7A90600649E08 /* SubjectAlertsRemoteDataSource.swift */; };
+		38D62C7F23D7A91D00649E08 /* SubjectAlertsCacheDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C7E23D7A91D00649E08 /* SubjectAlertsCacheDataSource.swift */; };
+		38D62C8123D7B32900649E08 /* SubjectAlertsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C8023D7B32900649E08 /* SubjectAlertsResponse.swift */; };
 		38D71BED23D3D59A00198F7B /* SubjectAlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D71BEC23D3D59A00198F7B /* SubjectAlertTableViewCell.swift */; };
 		38D71BEF23D3D5AC00198F7B /* NiblessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D71BEE23D3D5AC00198F7B /* NiblessTableViewCell.swift */; };
 		38D956B923D3F54500A7E8DA /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 38D956B823D3F54500A7E8DA /* RxSwift */; };
@@ -282,6 +287,11 @@
 		38D62C7023D77FAC00649E08 /* SubjectAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlerts.swift; sourceTree = "<group>"; };
 		38D62C7223D7863D00649E08 /* GetAllSubjectsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllSubjectsUseCase.swift; sourceTree = "<group>"; };
 		38D62C7423D7864900649E08 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		38D62C7723D7A54C00649E08 /* GetAllSubjectAlertsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllSubjectAlertsUseCase.swift; sourceTree = "<group>"; };
+		38D62C7A23D7A89200649E08 /* SubjectAlertsDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlertsDataRepository.swift; sourceTree = "<group>"; };
+		38D62C7C23D7A90600649E08 /* SubjectAlertsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlertsRemoteDataSource.swift; sourceTree = "<group>"; };
+		38D62C7E23D7A91D00649E08 /* SubjectAlertsCacheDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlertsCacheDataSource.swift; sourceTree = "<group>"; };
+		38D62C8023D7B32900649E08 /* SubjectAlertsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlertsResponse.swift; sourceTree = "<group>"; };
 		38D71BEC23D3D59A00198F7B /* SubjectAlertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlertTableViewCell.swift; sourceTree = "<group>"; };
 		38D71BEE23D3D5AC00198F7B /* NiblessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessTableViewCell.swift; sourceTree = "<group>"; };
 		38D956C223D3F85700A7E8DA /* SubjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsViewModel.swift; sourceTree = "<group>"; };
@@ -647,6 +657,7 @@
 		38843A2A23CB86E200CA620E /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				38D62C7923D7A86E00649E08 /* SubjectAlerts */,
 				38D956CA23D3F95500A7E8DA /* Subjects */,
 				38843A3C23CB8E3400CA620E /* Interfaces */,
 				38843A3B23CB8E2D00CA620E /* Credentials */,
@@ -749,6 +760,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		38D62C7623D7A53C00649E08 /* SubjectAlerts */ = {
+			isa = PBXGroup;
+			children = (
+				38D62C7723D7A54C00649E08 /* GetAllSubjectAlertsUseCase.swift */,
+			);
+			path = SubjectAlerts;
+			sourceTree = "<group>";
+		};
+		38D62C7923D7A86E00649E08 /* SubjectAlerts */ = {
+			isa = PBXGroup;
+			children = (
+				38D62C7A23D7A89200649E08 /* SubjectAlertsDataRepository.swift */,
+				38D62C7C23D7A90600649E08 /* SubjectAlertsRemoteDataSource.swift */,
+				38D62C7E23D7A91D00649E08 /* SubjectAlertsCacheDataSource.swift */,
+			);
+			path = SubjectAlerts;
+			sourceTree = "<group>";
+		};
 		38D71BEA23D3D56000198F7B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -778,6 +807,7 @@
 		38D956CF23D3FA6C00A7E8DA /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				38D62C7623D7A53C00649E08 /* SubjectAlerts */,
 				38D956D023D3FA7C00A7E8DA /* Subjects */,
 				38D62C7423D7864900649E08 /* UseCase.swift */,
 			);
@@ -813,6 +843,7 @@
 			isa = PBXGroup;
 			children = (
 				38D956E123D4D64400A7E8DA /* SubjectsResponse.swift */,
+				38D62C8023D7B32900649E08 /* SubjectAlertsResponse.swift */,
 			);
 			path = ResponseModels;
 			sourceTree = "<group>";
@@ -1229,6 +1260,7 @@
 				38D62C7323D7863D00649E08 /* GetAllSubjectsUseCase.swift in Sources */,
 				38843A3423CB8B4600CA620E /* RemoteSubject.swift in Sources */,
 				38843A5B23CBA4AF00CA620E /* AuthResponse.swift in Sources */,
+				38D62C7823D7A54C00649E08 /* GetAllSubjectAlertsUseCase.swift in Sources */,
 				38D956C923D3F8B100A7E8DA /* UserProfileRepository.swift in Sources */,
 				38D62C7523D7864900649E08 /* UseCase.swift in Sources */,
 				38D956C723D3F89B00A7E8DA /* SubjectsAlertsRepository.swift in Sources */,
@@ -1250,6 +1282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38D62C7D23D7A90600649E08 /* SubjectAlertsRemoteDataSource.swift in Sources */,
+				38D62C7F23D7A91D00649E08 /* SubjectAlertsCacheDataSource.swift in Sources */,
 				38843A4023CB8EB300CA620E /* KeyChainDataSource.swift in Sources */,
 				38D956D923D4076800A7E8DA /* SubjectsCacheDataSource.swift in Sources */,
 				38843A3E23CB8E3F00CA620E /* RemoteDataSource.swift in Sources */,
@@ -1258,10 +1292,12 @@
 				38D956D723D4067000A7E8DA /* CacheDataSource.swift in Sources */,
 				38843A4923CB92BE00CA620E /* PlatformDependencyContainer.swift in Sources */,
 				38843A2223CAFC6400CA620E /* AuthTokens.swift in Sources */,
+				38D62C8123D7B32900649E08 /* SubjectAlertsResponse.swift in Sources */,
 				38843A3A23CB8CEF00CA620E /* AuthRequestAdapter.swift in Sources */,
 				38D956CC23D3F97400A7E8DA /* SubjectsDataRepository.swift in Sources */,
 				38843A2623CB052100CA620E /* RacoAuthParameters.swift in Sources */,
 				38843A5623CBA34F00CA620E /* AuthedSessionManager.swift in Sources */,
+				38D62C7B23D7A89200649E08 /* SubjectAlertsDataRepository.swift in Sources */,
 				38843A4B23CB93B700CA620E /* CredentialsRemoteDataSource.swift in Sources */,
 				38D956CE23D3F99000A7E8DA /* SubjectsRemoteDataSource.swift in Sources */,
 				38843A2C23CB86F200CA620E /* CredentialsDataRepository.swift in Sources */,

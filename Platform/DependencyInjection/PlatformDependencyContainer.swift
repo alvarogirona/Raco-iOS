@@ -77,15 +77,12 @@ public class PlatformDependencyContainer {
 
     public lazy var subjectsRepository: SubjectsRepository = self.makeSubjectsDataRepository()
 
-    public func makeGetAllSubjectsUseCase() -> GetAllSubjectsUseCase {
-        return GetAllSubjectsUseCase(subjectsRepository: subjectsRepository)
-    }
-
-    private func makeSubjectsDataRepository() -> SubjectsDataRepository<SubjectsRemoteDataSource, SubjectsCacheDataSource> {
-        return SubjectsDataRepository<SubjectsRemoteDataSource, SubjectsCacheDataSource>(
-            remoteDataSource: makeSubjectsRemoteDataSource(),
-            cacheDataSource: makeSubjectsCacheDataSource()
-        )
+    private func makeSubjectsDataRepository()
+        -> SubjectsDataRepository<SubjectsRemoteDataSource, SubjectsCacheDataSource> {
+            return SubjectsDataRepository<SubjectsRemoteDataSource, SubjectsCacheDataSource>(
+                remoteDataSource: makeSubjectsRemoteDataSource(),
+                cacheDataSource: makeSubjectsCacheDataSource()
+            )
     }
 
     private func makeSubjectsRemoteDataSource() -> SubjectsRemoteDataSource {
@@ -94,6 +91,34 @@ public class PlatformDependencyContainer {
 
     private func makeSubjectsCacheDataSource() -> SubjectsCacheDataSource {
         return SubjectsCacheDataSource()
+    }
+
+    public func makeGetAllSubjectsUseCase() -> GetAllSubjectsUseCase {
+        return GetAllSubjectsUseCase(subjectsRepository: subjectsRepository)
+    }
+
+    // MARK: Subject alerts
+
+    public lazy var subjectAlertsRepository: SubjectAlertsRepository = self.makeSubjectAlertsDataRepository()
+
+    private func makeSubjectAlertsDataRepository()
+        -> SubjectAlertsDataRepository<SubjectAlertsRemoteDataSource, SubjectAlertsCacheDataSource> {
+            return SubjectAlertsDataRepository(
+                remoteDataSource: makeSubjectAlertsRemoteDataSource(),
+                cacheDataSource: makeSubjectAlertsCacheDataSource()
+            )
+    }
+
+    private func makeSubjectAlertsRemoteDataSource() -> SubjectAlertsRemoteDataSource {
+        return SubjectAlertsRemoteDataSource(sessionManager: getAuthSessionManager())
+    }
+
+    private func makeSubjectAlertsCacheDataSource() -> SubjectAlertsCacheDataSource {
+        return SubjectAlertsCacheDataSource()
+    }
+
+    public func makeGetAllSubjectsAlertsUseCase() -> GetAllSubjectAlertsUseCase {
+        return GetAllSubjectAlertsUseCase(subjectAlertsRepository: subjectAlertsRepository)
     }
 
 

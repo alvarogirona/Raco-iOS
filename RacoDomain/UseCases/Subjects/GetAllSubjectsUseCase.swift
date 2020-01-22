@@ -22,6 +22,5 @@ public class GetAllSubjectsUseCase: UseCase {
         return subjectsRepository
             .getAll()
             .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
-            .asObservable()
     }
 }

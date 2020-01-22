@@ -118,7 +118,11 @@ class SignedInDependencyContainer {
         return SubjectsViewModel(subjectsRepository: platformDependencyContainer.subjectsRepository)
     }
 
-    func makeSubjectAlertsViewModel() -> SubjectAlertsViewModel<GetAllSubjectsUseCase> {
-        return SubjectAlertsViewModel(getAllSubjectsUseCase: platformDependencyContainer.makeGetAllSubjectsUseCase())
+    func makeSubjectAlertsViewModel() -> SubjectAlertsViewModel<GetAllSubjectsUseCase, GetAllSubjectAlertsUseCase> {
+        return SubjectAlertsViewModel(
+            getAllSubjectsUseCase: platformDependencyContainer.makeGetAllSubjectsUseCase(),
+            getAllSubjectAlertsUseCase: platformDependencyContainer.makeGetAllSubjectsAlertsUseCase(),
+            subjectAlertsMapper: SubjectsAlertsMapper()
+        )
     }
 }

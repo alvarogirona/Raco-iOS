@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import RxSwift
 
-public protocol SubjectsAlertRepository {
-    
+public protocol SubjectAlertsRepository {
+
+    func loadInitialData()
+    func getAll() -> Observable<[RemoteSubjectAlert]>
 }

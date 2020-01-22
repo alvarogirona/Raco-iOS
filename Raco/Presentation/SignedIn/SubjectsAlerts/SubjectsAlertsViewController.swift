@@ -7,20 +7,30 @@
 //
 
 import UIKit
+import RxSwift
 import RacoDomain
 
 class SubjectsAlertsViewController: NiblessViewController {
 
-    private let viewModel: SubjectAlertsViewModel<GetAllSubjectsUseCase>
+    // MARK: - Dependencies
+    private let viewModel: SubjectAlertsViewModel<GetAllSubjectsUseCase, GetAllSubjectAlertsUseCase>
     private let alertsView: SubjectAlertsView
 
+    // MARK: - Data
+    private var subjects: [SubjectAlerts] = []
+
+    // MARK: - Private attributes
+    private let disposeBag = DisposeBag()
+
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.title = "Avisos"
     }
 
-    init (viewModel: SubjectAlertsViewModel<GetAllSubjectsUseCase>,
+    // MARK: initialization
+    init (viewModel: SubjectAlertsViewModel<GetAllSubjectsUseCase, GetAllSubjectAlertsUseCase>,
           rootView: SubjectAlertsView) {
         self.viewModel = viewModel
         self.alertsView = rootView
@@ -29,9 +39,53 @@ class SubjectsAlertsViewController: NiblessViewController {
 
         alertsView.frame = view.frame
         view.addSubview(alertsView)
+
+        configureTableView()
+        bindViewModel()
+    }
+
+    private func configureTableView() {
+        alertsView.subjectAlertsTableView.register(SubjectAlertTableViewCell.self, forCellReuseIdentifier: "cell")
+        alertsView.subjectAlertsTableView.delegate = self
+        alertsView.subjectAlertsTableView.dataSource = self
+    }
+
+    // MARK: - Binding
+    private func bindViewModel() {
+        viewModel.subjectAlertsSubject
+            .observeOn(MainScheduler.asyncInstance)
+            .subscribe(onNext: { [unowned self] subjects in
+                self.subjects = subjects
+                self.alertsView.subjectAlertsTableView.reloadData()
+            }).disposed(by: disposeBag)
     }
 }
 
+extension SubjectsAlertsViewController: UITableViewDelegate, UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return subjects.count
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return subjects[section].subjectame
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return subjects[section].alerts.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SubjectAlertTableViewCell
+
+        cell.renderSubjectAlert(subjectAlert: subjects[indexPath.section].alerts[indexPath.row])
+
+        return cell
+    }
+
+
+}
+
 protocol AlertsDependencyContainer {
-    func makeAlertsViewModel() -> SubjectAlertsViewModel<GetAllSubjectsUseCase>
+    func makeAlertsViewModel() -> SubjectAlertsViewModel<GetAllSubjectsUseCase, GetAllSubjectAlertsUseCase>
 }
