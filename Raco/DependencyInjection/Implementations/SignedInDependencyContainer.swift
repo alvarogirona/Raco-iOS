@@ -10,10 +10,9 @@ import Platform
 import RacoDomain
 import UIKit
 
-class SignedInDependencyContainer {
+class SignedInDependencyContainer: SignedInDependenciesProvider {
 
     let platformDependencyContainer: PlatformDependencyContainer
-
 
     init (platformDependencyContainer: PlatformDependencyContainer) {
         self.platformDependencyContainer = platformDependencyContainer
@@ -58,7 +57,7 @@ class SignedInDependencyContainer {
 
     // MARK: Schedule
 
-    func makeScheduleNavigationController(scheduleViewController: ScheduleViewController) -> NiblessNavigationController {
+    func makeScheduleNavigationController(scheduleViewController: ScheduleViewController<GetAllSubjectsUseCase, GetAllSchedulesUseCase>) -> NiblessNavigationController {
         let navigationController = NiblessNavigationController()
 
         navigationController.tabBarItem = UITabBarItem(title: "Horario", image: UIImage(named: "calendar"), tag: 1)
@@ -67,12 +66,16 @@ class SignedInDependencyContainer {
         return navigationController
     }
 
-    func makeScheduleViewController() -> ScheduleViewController {
+    private func makeScheduleViewController() -> ScheduleViewController<GetAllSubjectsUseCase, GetAllSchedulesUseCase> {
         return ScheduleViewController(viewModel: makeScheduleViewModel())
     }
 
-    private func makeScheduleViewModel() -> ScheduleViewModel {
-        return ScheduleViewModel()
+    private func makeScheduleViewModel() -> ScheduleViewModel<GetAllSubjectsUseCase, GetAllSchedulesUseCase> {
+        return ScheduleViewModel(
+            getAllSubjectsUseCase: platformDependencyContainer.makeGetAllSubjectsUseCase(),
+            getAllSchedulesUseCase: platformDependencyContainer.makeGetAllSchedulesUseCase(),
+            mapper: ScheduleMapper()
+        )
     }
 
     // MARK: Subjects
@@ -89,7 +92,7 @@ class SignedInDependencyContainer {
     }
 
 
-    func makeSubjectsViewController() -> SubjectsViewController {
+    private func makeSubjectsViewController() -> SubjectsViewController {
         let subjectsViewModel = makeSubjectsViewModel()
         let subjectsVC = SubjectsViewController(
             rootView: makeSubjectsRootView(subjectsViewModel: subjectsViewModel),
@@ -98,7 +101,7 @@ class SignedInDependencyContainer {
         return subjectsVC
     }
 
-    func makeSubjectsRootView(subjectsViewModel: SubjectsViewModel) -> SubjectsRootView {
+    private func makeSubjectsRootView(subjectsViewModel: SubjectsViewModel) -> SubjectsRootView {
         return SubjectsRootView(viewModel: subjectsViewModel)
     }
 

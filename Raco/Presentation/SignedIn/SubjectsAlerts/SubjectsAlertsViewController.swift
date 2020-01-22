@@ -10,10 +10,11 @@ import UIKit
 import RxSwift
 import RacoDomain
 
-class SubjectsAlertsViewController: NiblessViewController {
+class SubjectsAlertsViewController<T: UseCase, R: UseCase>: NiblessViewController, UITableViewDelegate, UITableViewDataSource
+where T.Resource == [RemoteSubject], R.Resource == [RemoteSubjectAlert] {
 
     // MARK: - Dependencies
-    private let viewModel: SubjectAlertsViewModel<GetAllSubjectsUseCase, GetAllSubjectAlertsUseCase>
+    private let viewModel: SubjectAlertsViewModel<T, R>
     private let alertsView: SubjectAlertsView
 
     // MARK: - Data
@@ -30,7 +31,7 @@ class SubjectsAlertsViewController: NiblessViewController {
     }
 
     // MARK: initialization
-    init (viewModel: SubjectAlertsViewModel<GetAllSubjectsUseCase, GetAllSubjectAlertsUseCase>,
+    init (viewModel: SubjectAlertsViewModel<T, R>,
           rootView: SubjectAlertsView) {
         self.viewModel = viewModel
         self.alertsView = rootView
@@ -59,9 +60,6 @@ class SubjectsAlertsViewController: NiblessViewController {
                 self.alertsView.subjectAlertsTableView.reloadData()
             }).disposed(by: disposeBag)
     }
-}
-
-extension SubjectsAlertsViewController: UITableViewDelegate, UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return subjects.count
@@ -82,8 +80,6 @@ extension SubjectsAlertsViewController: UITableViewDelegate, UITableViewDataSour
 
         return cell
     }
-
-
 }
 
 protocol AlertsDependencyContainer {

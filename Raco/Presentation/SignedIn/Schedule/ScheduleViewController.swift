@@ -7,10 +7,17 @@
 //
 
 import UIKit
+import RacoDomain
+import RxSwift
 
-class ScheduleViewController: NiblessViewController {
+class ScheduleViewController<T: UseCase, R: UseCase>: NiblessViewController
+where T.Resource == [RemoteSubject], R.Resource == [RemoteSchedule] {
 
-    private let viewModel: ScheduleViewModel
+    private let viewModel: ScheduleViewModel<T, R>
+
+    private let scheduleDayView: ScheduleDayView
+
+    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,26 +25,24 @@ class ScheduleViewController: NiblessViewController {
         self.navigationItem.title = "Horario"
     }
 
-    init (viewModel: ScheduleViewModel) {
+    init (viewModel: ScheduleViewModel<T, R>) {
         self.viewModel = viewModel
+        let scheduleDayView = ScheduleDayView()
+        self.scheduleDayView = scheduleDayView
 
         super.init()
 
-        let scheduleDayView = ScheduleDayView(schedule: [1,2,2,1,4])
-
         scheduleDayView.frame = view.frame
         view.addSubview(scheduleDayView)
+
+        bindViewModel()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func bindViewModel() {
+        viewModel.schedulesSubject
+            .subscribeOn(MainScheduler.asyncInstance)
+            .subscribe(onNext: { [unowned self] (classes) in
+                self.scheduleDayView.render(schedule: classes)
+            }).disposed(by: disposeBag)
     }
-    */
-
 }

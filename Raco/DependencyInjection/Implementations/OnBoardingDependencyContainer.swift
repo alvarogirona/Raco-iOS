@@ -11,7 +11,7 @@ import Platform
 import RacoDomain
 import RxSwift
 
-class OnBoardingDependencyContainer: SignedInViewControllerFactory {
+class OnBoardingDependencyContainer: OnBoardingDependenciesProvider, SignedInViewControllerFactory {
 
     let authorizationCodeSubject: PublishSubject<String> = PublishSubject()
 

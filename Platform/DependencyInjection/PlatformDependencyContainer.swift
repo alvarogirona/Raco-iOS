@@ -121,5 +121,25 @@ public class PlatformDependencyContainer {
         return GetAllSubjectAlertsUseCase(subjectAlertsRepository: subjectAlertsRepository)
     }
 
+    // MARK: Schedule
+
+    public lazy var scheduleRepository: ScheduleRepository = self.makeScheduleRepository()
+
+    private func makeScheduleRepository() -> ScheduleDataRepository<ScheduleRemoteDataSource, ScheduleCacheDataSource> {
+        return ScheduleDataRepository(remoteDataSource: makeScheduleRemoteDataSource(), cacheDataSource: makeScheduleCacheDataSource())
+    }
+
+    private func makeScheduleRemoteDataSource() -> ScheduleRemoteDataSource {
+        return ScheduleRemoteDataSource(sessionManager: getAuthSessionManager())
+    }
+
+    private func makeScheduleCacheDataSource() -> ScheduleCacheDataSource {
+        return ScheduleCacheDataSource()
+    }
+
+    public func makeGetAllSchedulesUseCase() -> GetAllSchedulesUseCase {
+        return GetAllSchedulesUseCase(scheduleRepository: scheduleRepository)
+    }
+
 
 }

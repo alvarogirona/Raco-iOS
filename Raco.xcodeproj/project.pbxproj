@@ -72,6 +72,18 @@
 		38843A5623CBA34F00CA620E /* AuthedSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A5523CBA34F00CA620E /* AuthedSessionManager.swift */; };
 		38843A5923CBA45600CA620E /* AuthRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A5823CBA45600CA620E /* AuthRequests.swift */; };
 		38843A5B23CBA4AF00CA620E /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A5A23CBA4AF00CA620E /* AuthResponse.swift */; };
+		38AA75C923D85E05003599B8 /* ScheduleSubjectClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75C823D85E05003599B8 /* ScheduleSubjectClassView.swift */; };
+		38AA75CB23D85E36003599B8 /* SubjectClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75CA23D85E36003599B8 /* SubjectClass.swift */; };
+		38AA75CD23D8768F003599B8 /* ScheduleMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75CC23D8768F003599B8 /* ScheduleMapper.swift */; };
+		38AA75CF23D877AA003599B8 /* RemoteSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75CE23D877AA003599B8 /* RemoteSchedule.swift */; };
+		38AA75D123D8880D003599B8 /* OnBoardingDependenciesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75D023D8880D003599B8 /* OnBoardingDependenciesProvider.swift */; };
+		38AA75D523D888E5003599B8 /* SignedInDependenciesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75D423D888E5003599B8 /* SignedInDependenciesProvider.swift */; };
+		38AA75D823D88A6E003599B8 /* ScheduleDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75D723D88A6E003599B8 /* ScheduleDataRepository.swift */; };
+		38AA75DA23D88B11003599B8 /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75D923D88B11003599B8 /* ScheduleRepository.swift */; };
+		38AA75DC23D88D83003599B8 /* ScheduleRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75DB23D88D83003599B8 /* ScheduleRemoteDataSource.swift */; };
+		38AA75DE23D88D8D003599B8 /* ScheduleCacheDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75DD23D88D8D003599B8 /* ScheduleCacheDataSource.swift */; };
+		38AA75E023D8931B003599B8 /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75DF23D8931B003599B8 /* ScheduleResponse.swift */; };
+		38AA75E323D89615003599B8 /* GetAllSchedulesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75E223D89615003599B8 /* GetAllSchedulesUseCase.swift */; };
 		38D62C6E23D77ED300649E08 /* SubjectsAlertsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C6D23D77ED300649E08 /* SubjectsAlertsMapper.swift */; };
 		38D62C7123D77FAC00649E08 /* SubjectAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C7023D77FAC00649E08 /* SubjectAlerts.swift */; };
 		38D62C7323D7863D00649E08 /* GetAllSubjectsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C7223D7863D00649E08 /* GetAllSubjectsUseCase.swift */; };
@@ -284,6 +296,18 @@
 		38843A5523CBA34F00CA620E /* AuthedSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthedSessionManager.swift; sourceTree = "<group>"; };
 		38843A5823CBA45600CA620E /* AuthRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequests.swift; sourceTree = "<group>"; };
 		38843A5A23CBA4AF00CA620E /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		38AA75C823D85E05003599B8 /* ScheduleSubjectClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleSubjectClassView.swift; sourceTree = "<group>"; };
+		38AA75CA23D85E36003599B8 /* SubjectClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectClass.swift; sourceTree = "<group>"; };
+		38AA75CC23D8768F003599B8 /* ScheduleMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleMapper.swift; sourceTree = "<group>"; };
+		38AA75CE23D877AA003599B8 /* RemoteSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteSchedule.swift; sourceTree = "<group>"; };
+		38AA75D023D8880D003599B8 /* OnBoardingDependenciesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingDependenciesProvider.swift; sourceTree = "<group>"; };
+		38AA75D423D888E5003599B8 /* SignedInDependenciesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInDependenciesProvider.swift; sourceTree = "<group>"; };
+		38AA75D723D88A6E003599B8 /* ScheduleDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDataRepository.swift; sourceTree = "<group>"; };
+		38AA75D923D88B11003599B8 /* ScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRepository.swift; sourceTree = "<group>"; };
+		38AA75DB23D88D83003599B8 /* ScheduleRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRemoteDataSource.swift; sourceTree = "<group>"; };
+		38AA75DD23D88D8D003599B8 /* ScheduleCacheDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCacheDataSource.swift; sourceTree = "<group>"; };
+		38AA75DF23D8931B003599B8 /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
+		38AA75E223D89615003599B8 /* GetAllSchedulesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllSchedulesUseCase.swift; sourceTree = "<group>"; };
 		38D62C6D23D77ED300649E08 /* SubjectsAlertsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsAlertsMapper.swift; sourceTree = "<group>"; };
 		38D62C7023D77FAC00649E08 /* SubjectAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlerts.swift; sourceTree = "<group>"; };
 		38D62C7223D7863D00649E08 /* GetAllSubjectsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllSubjectsUseCase.swift; sourceTree = "<group>"; };
@@ -568,8 +592,8 @@
 		388439DC23CABDDE00CA620E /* DependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
-				388439DD23CABE0A00CA620E /* OnBoardingDependencyContainer.swift */,
-				386346EA23CBD321008D7C37 /* SignedInDependencyContainer.swift */,
+				38AA75D323D88817003599B8 /* Implementations */,
+				38AA75D223D88811003599B8 /* Protocols */,
 			);
 			path = DependencyInjection;
 			sourceTree = "<group>";
@@ -653,6 +677,7 @@
 				38D956C423D3F87F00A7E8DA /* SubjectsRepository.swift */,
 				38D956C623D3F89B00A7E8DA /* SubjectsAlertsRepository.swift */,
 				38D956C823D3F8B100A7E8DA /* UserProfileRepository.swift */,
+				38AA75D923D88B11003599B8 /* ScheduleRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -660,6 +685,7 @@
 		38843A2A23CB86E200CA620E /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				38AA75D623D88A5B003599B8 /* Schedule */,
 				38D62C7923D7A86E00649E08 /* SubjectAlerts */,
 				38D956CA23D3F95500A7E8DA /* Subjects */,
 				38843A3C23CB8E3400CA620E /* Interfaces */,
@@ -675,6 +701,7 @@
 				38843A3323CB8B4600CA620E /* RemoteSubject.swift */,
 				38843A5A23CBA4AF00CA620E /* AuthResponse.swift */,
 				38D956E423D4D7E000A7E8DA /* RemoteSubjectAlert.swift */,
+				38AA75CE23D877AA003599B8 /* RemoteSchedule.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -747,10 +774,47 @@
 			path = PublicRequests;
 			sourceTree = "<group>";
 		};
+		38AA75D223D88811003599B8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				38AA75D023D8880D003599B8 /* OnBoardingDependenciesProvider.swift */,
+				38AA75D423D888E5003599B8 /* SignedInDependenciesProvider.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		38AA75D323D88817003599B8 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				388439DD23CABE0A00CA620E /* OnBoardingDependencyContainer.swift */,
+				386346EA23CBD321008D7C37 /* SignedInDependencyContainer.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		38AA75D623D88A5B003599B8 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				38AA75D723D88A6E003599B8 /* ScheduleDataRepository.swift */,
+				38AA75DB23D88D83003599B8 /* ScheduleRemoteDataSource.swift */,
+				38AA75DD23D88D8D003599B8 /* ScheduleCacheDataSource.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		38AA75E123D89607003599B8 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				38AA75E223D89615003599B8 /* GetAllSchedulesUseCase.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
 		38D62C6C23D77EC000649E08 /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
 				38D62C6D23D77ED300649E08 /* SubjectsAlertsMapper.swift */,
+				38AA75CC23D8768F003599B8 /* ScheduleMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -759,6 +823,7 @@
 			isa = PBXGroup;
 			children = (
 				38D62C7023D77FAC00649E08 /* SubjectAlerts.swift */,
+				38AA75CA23D85E36003599B8 /* SubjectClass.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -818,6 +883,7 @@
 		38D956CF23D3FA6C00A7E8DA /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				38AA75E123D89607003599B8 /* Schedule */,
 				38D62C7623D7A53C00649E08 /* SubjectAlerts */,
 				38D956D023D3FA7C00A7E8DA /* Subjects */,
 				38D62C7423D7864900649E08 /* UseCase.swift */,
@@ -855,6 +921,7 @@
 			children = (
 				38D956E123D4D64400A7E8DA /* SubjectsResponse.swift */,
 				38D62C8023D7B32900649E08 /* SubjectAlertsResponse.swift */,
+				38AA75DF23D8931B003599B8 /* ScheduleResponse.swift */,
 			);
 			path = ResponseModels;
 			sourceTree = "<group>";
@@ -865,6 +932,7 @@
 				38D956E923D515A800A7E8DA /* ScheduleViewController.swift */,
 				38D956EB23D515BC00A7E8DA /* ScheduleDayView.swift */,
 				38D956ED23D515C900A7E8DA /* ScheduleViewModel.swift */,
+				38AA75C823D85E05003599B8 /* ScheduleSubjectClassView.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -1203,6 +1271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3884399223CABB9200CA620E /* NiblessNavigationController.swift in Sources */,
+				38AA75CD23D8768F003599B8 /* ScheduleMapper.swift in Sources */,
 				3863470423CC0B85008D7C37 /* SubjectAlertsViewModel.swift in Sources */,
 				38D62C7123D77FAC00649E08 /* SubjectAlerts.swift in Sources */,
 				3884396A23CABA4600CA620E /* ViewController.swift in Sources */,
@@ -1214,9 +1283,11 @@
 				38D62C6E23D77ED300649E08 /* SubjectsAlertsMapper.swift in Sources */,
 				3863470223CC0B57008D7C37 /* SubjectAlertsView.swift in Sources */,
 				3863470023CC080E008D7C37 /* UserProfileViewController.swift in Sources */,
+				38AA75CB23D85E36003599B8 /* SubjectClass.swift in Sources */,
 				388439DE23CABE0A00CA620E /* OnBoardingDependencyContainer.swift in Sources */,
 				3884396623CABA4600CA620E /* AppDelegate.swift in Sources */,
 				388439E823CAC09200CA620E /* UIViewPreview.swift in Sources */,
+				38AA75C923D85E05003599B8 /* ScheduleSubjectClassView.swift in Sources */,
 				3863470623CC0DCC008D7C37 /* UserProfileRootView.swift in Sources */,
 				3884399023CABB8500CA620E /* NiblessViewController.swift in Sources */,
 				38D956EC23D515BC00A7E8DA /* ScheduleDayView.swift in Sources */,
@@ -1225,6 +1296,8 @@
 				388439E223CABEAB00CA620E /* LogInViewModel.swift in Sources */,
 				38D956E723D4EBB600A7E8DA /* SubjectTableViewCell.swift in Sources */,
 				388439E023CABE2A00CA620E /* LogInView.swift in Sources */,
+				38AA75D523D888E5003599B8 /* SignedInDependenciesProvider.swift in Sources */,
+				38AA75D123D8880D003599B8 /* OnBoardingDependenciesProvider.swift in Sources */,
 				386346FC23CC07F9008D7C37 /* SubjectsViewController.swift in Sources */,
 				38D956C323D3F85700A7E8DA /* SubjectsViewModel.swift in Sources */,
 				3863470823CC0DE9008D7C37 /* SubjectsRootView.swift in Sources */,
@@ -1270,13 +1343,16 @@
 			files = (
 				38843A3223CB878800CA620E /* RemoteUserProfile.swift in Sources */,
 				38D62C7323D7863D00649E08 /* GetAllSubjectsUseCase.swift in Sources */,
+				38AA75DA23D88B11003599B8 /* ScheduleRepository.swift in Sources */,
 				38843A3423CB8B4600CA620E /* RemoteSubject.swift in Sources */,
 				38843A5B23CBA4AF00CA620E /* AuthResponse.swift in Sources */,
+				38AA75CF23D877AA003599B8 /* RemoteSchedule.swift in Sources */,
 				38D62C7823D7A54C00649E08 /* GetAllSubjectAlertsUseCase.swift in Sources */,
 				38D956C923D3F8B100A7E8DA /* UserProfileRepository.swift in Sources */,
 				38D62C7523D7864900649E08 /* UseCase.swift in Sources */,
 				38D956C723D3F89B00A7E8DA /* SubjectsAlertsRepository.swift in Sources */,
 				38D956E523D4D7E000A7E8DA /* RemoteSubjectAlert.swift in Sources */,
+				38AA75E323D89615003599B8 /* GetAllSchedulesUseCase.swift in Sources */,
 				38D956C523D3F87F00A7E8DA /* SubjectsRepository.swift in Sources */,
 				38843A2923CB868600CA620E /* CredentialsRepository.swift in Sources */,
 			);
@@ -1295,9 +1371,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				38D62C7D23D7A90600649E08 /* SubjectAlertsRemoteDataSource.swift in Sources */,
+				38AA75DC23D88D83003599B8 /* ScheduleRemoteDataSource.swift in Sources */,
 				38D62C7F23D7A91D00649E08 /* SubjectAlertsCacheDataSource.swift in Sources */,
 				38843A4023CB8EB300CA620E /* KeyChainDataSource.swift in Sources */,
 				38D956D923D4076800A7E8DA /* SubjectsCacheDataSource.swift in Sources */,
+				38AA75E023D8931B003599B8 /* ScheduleResponse.swift in Sources */,
 				38843A3E23CB8E3F00CA620E /* RemoteDataSource.swift in Sources */,
 				38D956E223D4D64400A7E8DA /* SubjectsResponse.swift in Sources */,
 				38843A3723CB8C7000CA620E /* SubjectRequests.swift in Sources */,
@@ -1311,6 +1389,7 @@
 				38843A5623CBA34F00CA620E /* AuthedSessionManager.swift in Sources */,
 				38D62C7B23D7A89200649E08 /* SubjectAlertsDataRepository.swift in Sources */,
 				38843A4B23CB93B700CA620E /* CredentialsRemoteDataSource.swift in Sources */,
+				38AA75D823D88A6E003599B8 /* ScheduleDataRepository.swift in Sources */,
 				38D956CE23D3F99000A7E8DA /* SubjectsRemoteDataSource.swift in Sources */,
 				38843A2C23CB86F200CA620E /* CredentialsDataRepository.swift in Sources */,
 				38D956DE23D4CB5600A7E8DA /* Endpoints.swift in Sources */,
@@ -1318,6 +1397,7 @@
 				38843A5923CBA45600CA620E /* AuthRequests.swift in Sources */,
 				38D956E023D4CD5500A7E8DA /* NetworkErrors.swift in Sources */,
 				38843A2423CB037600CA620E /* AuthUrls.swift in Sources */,
+				38AA75DE23D88D8D003599B8 /* ScheduleCacheDataSource.swift in Sources */,
 				38D956D223D3FE3300A7E8DA /* NetworkModule.swift in Sources */,
 				38843A2E23CB870900CA620E /* CredentiaslKeyChainDataSource.swift in Sources */,
 			);

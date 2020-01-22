@@ -18,4 +18,8 @@ class Endpoints {
     class var subjects: String {
         return baseUrl + "/v2/jo/assignatures/?format=json"
     }
+
+    class var schedule: String {
+        return baseUrl + "/v2/jo/classes/?format=json"
+    }
 }

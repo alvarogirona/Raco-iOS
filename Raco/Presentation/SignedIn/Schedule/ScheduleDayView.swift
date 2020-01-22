@@ -57,20 +57,17 @@ class ScheduleDayView: NiblessView {
 
         makeHierarchy()
         activateConstraints()
-
-        if let schedule = schedule {
-            render(schedule: schedule)
-        }
     }
 
     private func makeHierarchy() {
         addSubview(scrollView)
-        addSubview(stackView)
+        scrollView.addSubview(stackView)
     }
 
     private func activateConstraints() {
         activateScrollViewConstraints()
         activateStackViewContraints()
+        layoutIfNeeded()
     }
 
     private func activateScrollViewConstraints() {
@@ -92,42 +89,45 @@ class ScheduleDayView: NiblessView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
         let top = stackView.topAnchor
-            .constraint(equalTo: scrollView.topAnchor, constant: 16)
+            .constraint(equalTo: scrollView.topAnchor, constant: 10)
         let leading = stackView.leadingAnchor
-            .constraint(equalTo: scrollView.leadingAnchor, constant: 16)
+            .constraint(equalTo: scrollView.leadingAnchor, constant: 10)
         let trailing = stackView.trailingAnchor
-            .constraint(equalTo: scrollView.trailingAnchor, constant: -16)
+            .constraint(equalTo: scrollView.trailingAnchor, constant: -10)
+        let width = stackView.widthAnchor
+            .constraint(equalTo: scrollView.widthAnchor, constant: -20)
 
-        NSLayoutConstraint.activate([top, leading, trailing])
+        NSLayoutConstraint.activate([top, leading, trailing, width])
     }
 
     /**
      Renders a given schedule.
      */
-    func render(schedule: [Int]) {
+    func render(schedule: [SubjectClass]) {
         stackView.removeAllArrangedSubviews()
 
-        schedule.forEach { (hours) in
-            let view = createClassView(hours: hours)
+        schedule.forEach { ( subjectClass) in
+            let view = createClassView(subjectClass: subjectClass)
             view.backgroundColor = UIColor.systemGreen
             stackView.addArrangedSubview(view)
         }
+
+        stackView.setNeedsLayout()
+        stackView.layoutIfNeeded()
 
         scrollView.contentSize = stackView.bounds.size
     }
 
     /// TODO: Move to a separe `UIView` subclass
-    private func createClassView(hours: Int) -> UIView {
-        let view = UIView()
-
-        view.backgroundColor = .systemPink
+    private func createClassView(subjectClass: SubjectClass) -> UIView {
+        let view = ScheduleSubjectClassView(subjectClass: subjectClass)
 
         view.translatesAutoresizingMaskIntoConstraints = false
 
         view.layer.cornerRadius = 15.0
         view.layer.masksToBounds = true
 
-        let height = view.heightAnchor.constraint(equalToConstant: CGFloat(40.0 * Float(hours)))
+        let height = view.heightAnchor.constraint(equalToConstant: 75)
 
         NSLayoutConstraint.activate([height])
 
