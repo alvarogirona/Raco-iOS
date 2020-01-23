@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import RxSwift
 
-protocol UserProfileRepository {
-    
+public protocol UserProfileRepository {
+    func loadInitialData()
+    func getUserProfile() -> Observable<RemoteUserProfile>
 }

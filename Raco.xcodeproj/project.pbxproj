@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		382BBAF023D9005800D738F7 /* UserProfileDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382BBAEF23D9005800D738F7 /* UserProfileDataRepository.swift */; };
 		386346E623CBCB7C008D7C37 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 386346E523CBCB7C008D7C37 /* Colors.xcassets */; };
 		386346E923CBD304008D7C37 /* SignedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386346E823CBD304008D7C37 /* SignedInViewController.swift */; };
 		386346EB23CBD321008D7C37 /* SignedInDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386346EA23CBD321008D7C37 /* SignedInDependencyContainer.swift */; };
@@ -84,6 +85,8 @@
 		38AA75DE23D88D8D003599B8 /* ScheduleCacheDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75DD23D88D8D003599B8 /* ScheduleCacheDataSource.swift */; };
 		38AA75E023D8931B003599B8 /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75DF23D8931B003599B8 /* ScheduleResponse.swift */; };
 		38AA75E323D89615003599B8 /* GetAllSchedulesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75E223D89615003599B8 /* GetAllSchedulesUseCase.swift */; };
+		38AA75E523D8AFDC003599B8 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75E423D8AFDC003599B8 /* UserProfileViewModel.swift */; };
+		38AA75E823D8B1D3003599B8 /* GetUserProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75E723D8B1D3003599B8 /* GetUserProfileUseCase.swift */; };
 		38D62C6E23D77ED300649E08 /* SubjectsAlertsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C6D23D77ED300649E08 /* SubjectsAlertsMapper.swift */; };
 		38D62C7123D77FAC00649E08 /* SubjectAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C7023D77FAC00649E08 /* SubjectAlerts.swift */; };
 		38D62C7323D7863D00649E08 /* GetAllSubjectsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C7223D7863D00649E08 /* GetAllSubjectsUseCase.swift */; };
@@ -228,6 +231,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		382BBAEF23D9005800D738F7 /* UserProfileDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileDataRepository.swift; sourceTree = "<group>"; };
 		386346E523CBCB7C008D7C37 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		386346E823CBD304008D7C37 /* SignedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInViewController.swift; sourceTree = "<group>"; };
 		386346EA23CBD321008D7C37 /* SignedInDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInDependencyContainer.swift; sourceTree = "<group>"; };
@@ -308,6 +312,8 @@
 		38AA75DD23D88D8D003599B8 /* ScheduleCacheDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCacheDataSource.swift; sourceTree = "<group>"; };
 		38AA75DF23D8931B003599B8 /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
 		38AA75E223D89615003599B8 /* GetAllSchedulesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllSchedulesUseCase.swift; sourceTree = "<group>"; };
+		38AA75E423D8AFDC003599B8 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		38AA75E723D8B1D3003599B8 /* GetUserProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserProfileUseCase.swift; sourceTree = "<group>"; };
 		38D62C6D23D77ED300649E08 /* SubjectsAlertsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsAlertsMapper.swift; sourceTree = "<group>"; };
 		38D62C7023D77FAC00649E08 /* SubjectAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlerts.swift; sourceTree = "<group>"; };
 		38D62C7223D7863D00649E08 /* GetAllSubjectsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllSubjectsUseCase.swift; sourceTree = "<group>"; };
@@ -412,6 +418,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		382BBAEE23D9004700D738F7 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				382BBAEF23D9005800D738F7 /* UserProfileDataRepository.swift */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
 		386346E723CBD2EA008D7C37 /* SignedIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +444,7 @@
 			children = (
 				386346FF23CC080E008D7C37 /* UserProfileViewController.swift */,
 				3863470523CC0DCC008D7C37 /* UserProfileRootView.swift */,
+				38AA75E423D8AFDC003599B8 /* UserProfileViewModel.swift */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";
@@ -685,6 +700,7 @@
 		38843A2A23CB86E200CA620E /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				382BBAEE23D9004700D738F7 /* UserProfile */,
 				38AA75D623D88A5B003599B8 /* Schedule */,
 				38D62C7923D7A86E00649E08 /* SubjectAlerts */,
 				38D956CA23D3F95500A7E8DA /* Subjects */,
@@ -810,6 +826,14 @@
 			path = Schedule;
 			sourceTree = "<group>";
 		};
+		38AA75E623D8B1C7003599B8 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				38AA75E723D8B1D3003599B8 /* GetUserProfileUseCase.swift */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
 		38D62C6C23D77EC000649E08 /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
@@ -883,6 +907,7 @@
 		38D956CF23D3FA6C00A7E8DA /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				38AA75E623D8B1C7003599B8 /* UserProfile */,
 				38AA75E123D89607003599B8 /* Schedule */,
 				38D62C7623D7A53C00649E08 /* SubjectAlerts */,
 				38D956D023D3FA7C00A7E8DA /* Subjects */,
@@ -1287,6 +1312,7 @@
 				388439DE23CABE0A00CA620E /* OnBoardingDependencyContainer.swift in Sources */,
 				3884396623CABA4600CA620E /* AppDelegate.swift in Sources */,
 				388439E823CAC09200CA620E /* UIViewPreview.swift in Sources */,
+				38AA75E523D8AFDC003599B8 /* UserProfileViewModel.swift in Sources */,
 				38AA75C923D85E05003599B8 /* ScheduleSubjectClassView.swift in Sources */,
 				3863470623CC0DCC008D7C37 /* UserProfileRootView.swift in Sources */,
 				3884399023CABB8500CA620E /* NiblessViewController.swift in Sources */,
@@ -1342,6 +1368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38843A3223CB878800CA620E /* RemoteUserProfile.swift in Sources */,
+				38AA75E823D8B1D3003599B8 /* GetUserProfileUseCase.swift in Sources */,
 				38D62C7323D7863D00649E08 /* GetAllSubjectsUseCase.swift in Sources */,
 				38AA75DA23D88B11003599B8 /* ScheduleRepository.swift in Sources */,
 				38843A3423CB8B4600CA620E /* RemoteSubject.swift in Sources */,
@@ -1383,6 +1410,7 @@
 				38843A4923CB92BE00CA620E /* PlatformDependencyContainer.swift in Sources */,
 				38843A2223CAFC6400CA620E /* AuthTokens.swift in Sources */,
 				38D62C8123D7B32900649E08 /* SubjectAlertsResponse.swift in Sources */,
+				382BBAF023D9005800D738F7 /* UserProfileDataRepository.swift in Sources */,
 				38843A3A23CB8CEF00CA620E /* AuthRequestAdapter.swift in Sources */,
 				38D956CC23D3F97400A7E8DA /* SubjectsDataRepository.swift in Sources */,
 				38843A2623CB052100CA620E /* RacoAuthParameters.swift in Sources */,
