@@ -33,7 +33,6 @@ class ScheduleSubjectClassView: NiblessView {
 
         label.layer.cornerRadius = 10
         label.layer.masksToBounds = true
-        label.textColor = .systemBlue
         label.backgroundColor = .white
         label.textAlignment = .center
         label.alpha = 0.8
@@ -79,8 +78,6 @@ class ScheduleSubjectClassView: NiblessView {
         }
 
         hierarchyNotReady = true
-
-        backgroundColor = .systemBlue
 
         makeRoundedCorners()
         makeHierarchy()
@@ -170,6 +167,9 @@ class ScheduleSubjectClassView: NiblessView {
         classroomLabel.text = "A6001"
 
         classTypeLabel.text = subjectClass.classType
+
+        backgroundColor = UIColor.colorFor(index: subjectClass.subject.id)
+        classTypeLabel.textColor = UIColor.colorFor(index: subjectClass.subject.id)
     }
 
 }
@@ -183,7 +183,7 @@ struct ScheduleSubjectClass_Preview: PreviewProvider {
     static var dependencyContainer = SignedInDependencyContainer(platformDependencyContainer: PlatformDependencyContainer())
 
     static let scheduleSubjectClass = ScheduleSubjectClassView(
-        subjectClass: SubjectClass(subject: ScheduleSubject(name: "Mineria de dades"),
+        subjectClass: SubjectClass(subject: ScheduleSubject(name: "Mineria de dades", id: 1),
                                    classType: "T",
                                    startHour: "10:00",
                                    duration: 2,

@@ -44,6 +44,10 @@ class SignedInDependencyContainer: SignedInDependenciesProvider {
     // MARK: Subject alerts
     private func makeSubjectsAlertsNavigationController() -> NiblessNavigationController {
         let subjectsAlertsNavigationController = NiblessNavigationController()
+        subjectsAlertsNavigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        subjectsAlertsNavigationController.navigationBar.shadowImage = UIImage()
+        subjectsAlertsNavigationController.navigationBar.isTranslucent = true
+
         subjectsAlertsNavigationController.tabBarItem = UITabBarItem(title: "Avisos", image: UIImage(named: "star.fill"), tag: 0)
         let subjectAlertsViewModel = makeSubjectAlertsViewModel()
         let subjectsAlertsVC = SubjectsAlertsViewController(
@@ -59,6 +63,9 @@ class SignedInDependencyContainer: SignedInDependenciesProvider {
 
     func makeScheduleNavigationController(scheduleViewController: ScheduleViewController<GetAllSubjectsUseCase, GetAllSchedulesUseCase>) -> NiblessNavigationController {
         let navigationController = NiblessNavigationController()
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.isTranslucent = true
 
         navigationController.tabBarItem = UITabBarItem(title: "Horario", image: UIImage(named: "calendar"), tag: 1)
         navigationController.viewControllers = [scheduleViewController]
@@ -85,6 +92,10 @@ class SignedInDependencyContainer: SignedInDependenciesProvider {
     ) -> NiblessNavigationController {
 
         let navigationController = NiblessNavigationController()
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.isTranslucent = true
+
         navigationController.tabBarItem = UITabBarItem(title: "Asignaturas", image: UIImage(named: "list.dash"), tag: 2)
         navigationController.viewControllers = [subjectsViewController]
 
@@ -108,6 +119,9 @@ class SignedInDependencyContainer: SignedInDependenciesProvider {
     // MARK: User profile
     private func makeUserProfileNavigationController(userProfileViewController: UserProfileViewController) -> NiblessNavigationController {
         let navigationController = NiblessNavigationController()
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.isTranslucent = true
 
         navigationController.tabBarItem = UITabBarItem(title: "Usuario", image: UIImage(named: "person.fill"), tag: 3)
         navigationController.viewControllers = [userProfileViewController]

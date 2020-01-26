@@ -15,6 +15,7 @@ where T.Resource == [RemoteSubject], R.Resource == [RemoteSubjectAlert] {
 
     // Public subjects
     let subjectAlertsSubject: BehaviorSubject<[SubjectAlerts]> = BehaviorSubject(value: [])
+    let presentAlertSubject: PublishSubject<SubjectAlert> = PublishSubject()
 
     // Dependencies
     private let getAllSubjectsUseCase: T
@@ -75,6 +76,12 @@ where T.Resource == [RemoteSubject], R.Resource == [RemoteSubjectAlert] {
 
         let mappedSubjectAlerts = mapper.map(subjects: remoteSubjects, alerts: remoteAlerts)
         subjectAlertsSubject.onNext(mappedSubjectAlerts)
+    }
+
+    // MARK: - Task methods
+
+    func selected(alert: SubjectAlert) {
+        presentAlertSubject.onNext(alert)
     }
 
 }

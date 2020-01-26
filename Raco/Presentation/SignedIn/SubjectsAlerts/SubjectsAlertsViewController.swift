@@ -37,7 +37,7 @@ where T.Resource == [RemoteSubject], R.Resource == [RemoteSubjectAlert] {
         self.alertsView = rootView
 
         super.init()
-
+        
         alertsView.frame = view.frame
         view.addSubview(alertsView)
 
@@ -59,6 +59,12 @@ where T.Resource == [RemoteSubject], R.Resource == [RemoteSubjectAlert] {
                 self.subjects = subjects
                 self.alertsView.subjectAlertsTableView.reloadData()
             }).disposed(by: disposeBag)
+
+        viewModel.presentAlertSubject
+            .subscribe(onNext: { [unowned self] (subjectAlert) in
+                let detailViewController = SubjectAlertDetailViewController(subjectAlert: subjectAlert)
+                self.navigationController?.pushViewController(detailViewController, animated: true)
+            }).disposed(by: disposeBag)
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -79,6 +85,11 @@ where T.Resource == [RemoteSubject], R.Resource == [RemoteSubjectAlert] {
         cell.renderSubjectAlert(subjectAlert: subjects[indexPath.section].alerts[indexPath.row])
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alert = subjects[indexPath.section].alerts[indexPath.row]
+        viewModel.selected(alert: alert)
     }
 }
 

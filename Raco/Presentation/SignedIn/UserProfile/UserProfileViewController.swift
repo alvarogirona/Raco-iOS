@@ -19,7 +19,7 @@ class UserProfileViewController: NiblessViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var rootView = UserProfileRootView()
+        let rootView = UserProfileRootView()
         rootView.frame = view.frame
         view.addSubview(rootView)
     }

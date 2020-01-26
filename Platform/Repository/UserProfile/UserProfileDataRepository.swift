@@ -7,8 +7,20 @@
 //
 
 import Foundation
+import RxSwift
 import RacoDomain
 
 class UserProfileDataRepository: UserProfileRepository {
+    func loadInitialData() {
+
+    }
+
+    func getUserProfile() -> Observable<RemoteUserProfile> {
+        return Observable.create { observable in
+
+            return Disposables.create()
+        }
+    }
+
     
 }

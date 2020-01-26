@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		382BBAF023D9005800D738F7 /* UserProfileDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382BBAEF23D9005800D738F7 /* UserProfileDataRepository.swift */; };
+		3830D3D023DD0FDC004C73DB /* SubjectColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3830D3CF23DD0FDC004C73DB /* SubjectColor.swift */; };
+		3830D3D323DD1206004C73DB /* SubjectAlertDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3830D3D223DD1206004C73DB /* SubjectAlertDetailViewController.swift */; };
+		3830D3D523DD1248004C73DB /* SubjectAlertDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3830D3D423DD1248004C73DB /* SubjectAlertDetailView.swift */; };
+		3830D3D923DD1361004C73DB /* RacoAuthParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3830D3D823DD1361004C73DB /* RacoAuthParameters.swift */; };
 		386346E623CBCB7C008D7C37 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 386346E523CBCB7C008D7C37 /* Colors.xcassets */; };
 		386346E923CBD304008D7C37 /* SignedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386346E823CBD304008D7C37 /* SignedInViewController.swift */; };
 		386346EB23CBD321008D7C37 /* SignedInDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386346EA23CBD321008D7C37 /* SignedInDependencyContainer.swift */; };
@@ -54,9 +58,8 @@
 		38843A1423CACECC00CA620E /* Platform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388439FF23CACECC00CA620E /* Platform.framework */; };
 		38843A1523CACECC00CA620E /* Platform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 388439FF23CACECC00CA620E /* Platform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		38843A1E23CACEDC00CA620E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 38843A1D23CACEDC00CA620E /* Alamofire */; };
-		38843A2223CAFC6400CA620E /* AuthTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A2123CAFC6400CA620E /* AuthTokens.swift */; };
+		38843A2223CAFC6400CA620E /* AuthParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A2123CAFC6400CA620E /* AuthParameters.swift */; };
 		38843A2423CB037600CA620E /* AuthUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A2323CB037600CA620E /* AuthUrls.swift */; };
-		38843A2623CB052100CA620E /* RacoAuthParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A2523CB052100CA620E /* RacoAuthParameters.swift */; };
 		38843A2923CB868600CA620E /* CredentialsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A2823CB868600CA620E /* CredentialsRepository.swift */; };
 		38843A2C23CB86F200CA620E /* CredentialsDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A2B23CB86F200CA620E /* CredentialsDataRepository.swift */; };
 		38843A2E23CB870900CA620E /* CredentiaslKeyChainDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38843A2D23CB870900CA620E /* CredentiaslKeyChainDataSource.swift */; };
@@ -232,6 +235,10 @@
 
 /* Begin PBXFileReference section */
 		382BBAEF23D9005800D738F7 /* UserProfileDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileDataRepository.swift; sourceTree = "<group>"; };
+		3830D3CF23DD0FDC004C73DB /* SubjectColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectColor.swift; sourceTree = "<group>"; };
+		3830D3D223DD1206004C73DB /* SubjectAlertDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlertDetailViewController.swift; sourceTree = "<group>"; };
+		3830D3D423DD1248004C73DB /* SubjectAlertDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlertDetailView.swift; sourceTree = "<group>"; };
+		3830D3D823DD1361004C73DB /* RacoAuthParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacoAuthParameters.swift; sourceTree = "<group>"; };
 		386346E523CBCB7C008D7C37 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		386346E823CBD304008D7C37 /* SignedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInViewController.swift; sourceTree = "<group>"; };
 		386346EA23CBD321008D7C37 /* SignedInDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInDependencyContainer.swift; sourceTree = "<group>"; };
@@ -283,9 +290,8 @@
 		38843A0723CACECC00CA620E /* PlatformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlatformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38843A0E23CACECC00CA620E /* PlatformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformTests.swift; sourceTree = "<group>"; };
 		38843A1023CACECC00CA620E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38843A2123CAFC6400CA620E /* AuthTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokens.swift; sourceTree = "<group>"; };
+		38843A2123CAFC6400CA620E /* AuthParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthParameters.swift; sourceTree = "<group>"; };
 		38843A2323CB037600CA620E /* AuthUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUrls.swift; sourceTree = "<group>"; };
-		38843A2523CB052100CA620E /* RacoAuthParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacoAuthParameters.swift; sourceTree = "<group>"; };
 		38843A2823CB868600CA620E /* CredentialsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsRepository.swift; sourceTree = "<group>"; };
 		38843A2B23CB86F200CA620E /* CredentialsDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsDataRepository.swift; sourceTree = "<group>"; };
 		38843A2D23CB870900CA620E /* CredentiaslKeyChainDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentiaslKeyChainDataSource.swift; sourceTree = "<group>"; };
@@ -426,6 +432,23 @@
 			path = UserProfile;
 			sourceTree = "<group>";
 		};
+		3830D3CE23DD0FCC004C73DB /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				3830D3CF23DD0FDC004C73DB /* SubjectColor.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		3830D3D123DD1110004C73DB /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				3830D3D223DD1206004C73DB /* SubjectAlertDetailViewController.swift */,
+				3830D3D423DD1248004C73DB /* SubjectAlertDetailView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		386346E723CBD2EA008D7C37 /* SignedIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +475,7 @@
 		386346F923CC07C9008D7C37 /* SubjectsAlerts */ = {
 			isa = PBXGroup;
 			children = (
+				3830D3D123DD1110004C73DB /* Detail */,
 				38D71BEB23D3D56800198F7B /* Cell */,
 				386346FD23CC0805008D7C37 /* SubjectsAlertsViewController.swift */,
 				3863470123CC0B57008D7C37 /* SubjectAlertsView.swift */,
@@ -506,6 +530,7 @@
 		3884396423CABA4600CA620E /* Raco */ = {
 			isa = PBXGroup;
 			children = (
+				3830D3CE23DD0FCC004C73DB /* Colors */,
 				388439DC23CABDDE00CA620E /* DependencyInjection */,
 				388439D823CABCC200CA620E /* Presentation */,
 				3884396523CABA4600CA620E /* AppDelegate.swift */,
@@ -678,9 +703,9 @@
 		38843A2023CAFC4700CA620E /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				38843A2123CAFC6400CA620E /* AuthTokens.swift */,
+				38843A2123CAFC6400CA620E /* AuthParameters.swift */,
 				38843A2323CB037600CA620E /* AuthUrls.swift */,
-				38843A2523CB052100CA620E /* RacoAuthParameters.swift */,
+				3830D3D823DD1361004C73DB /* RacoAuthParameters.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -1296,6 +1321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3884399223CABB9200CA620E /* NiblessNavigationController.swift in Sources */,
+				3830D3D523DD1248004C73DB /* SubjectAlertDetailView.swift in Sources */,
 				38AA75CD23D8768F003599B8 /* ScheduleMapper.swift in Sources */,
 				3863470423CC0B85008D7C37 /* SubjectAlertsViewModel.swift in Sources */,
 				38D62C7123D77FAC00649E08 /* SubjectAlerts.swift in Sources */,
@@ -1303,6 +1329,7 @@
 				38D71BED23D3D59A00198F7B /* SubjectAlertTableViewCell.swift in Sources */,
 				38D956EE23D515C900A7E8DA /* ScheduleViewModel.swift in Sources */,
 				386346FE23CC0805008D7C37 /* SubjectsAlertsViewController.swift in Sources */,
+				3830D3D023DD0FDC004C73DB /* SubjectColor.swift in Sources */,
 				388439DA23CABD9700CA620E /* LogInViewController.swift in Sources */,
 				386346F523CC0551008D7C37 /* SignedInRootView.swift in Sources */,
 				38D62C6E23D77ED300649E08 /* SubjectsAlertsMapper.swift in Sources */,
@@ -1317,6 +1344,7 @@
 				3863470623CC0DCC008D7C37 /* UserProfileRootView.swift in Sources */,
 				3884399023CABB8500CA620E /* NiblessViewController.swift in Sources */,
 				38D956EC23D515BC00A7E8DA /* ScheduleDayView.swift in Sources */,
+				3830D3D323DD1206004C73DB /* SubjectAlertDetailViewController.swift in Sources */,
 				386346E923CBD304008D7C37 /* SignedInViewController.swift in Sources */,
 				38D956EA23D515A800A7E8DA /* ScheduleViewController.swift in Sources */,
 				388439E223CABEAB00CA620E /* LogInViewModel.swift in Sources */,
@@ -1408,12 +1436,11 @@
 				38843A3723CB8C7000CA620E /* SubjectRequests.swift in Sources */,
 				38D956D723D4067000A7E8DA /* CacheDataSource.swift in Sources */,
 				38843A4923CB92BE00CA620E /* PlatformDependencyContainer.swift in Sources */,
-				38843A2223CAFC6400CA620E /* AuthTokens.swift in Sources */,
+				38843A2223CAFC6400CA620E /* AuthParameters.swift in Sources */,
 				38D62C8123D7B32900649E08 /* SubjectAlertsResponse.swift in Sources */,
 				382BBAF023D9005800D738F7 /* UserProfileDataRepository.swift in Sources */,
 				38843A3A23CB8CEF00CA620E /* AuthRequestAdapter.swift in Sources */,
 				38D956CC23D3F97400A7E8DA /* SubjectsDataRepository.swift in Sources */,
-				38843A2623CB052100CA620E /* RacoAuthParameters.swift in Sources */,
 				38843A5623CBA34F00CA620E /* AuthedSessionManager.swift in Sources */,
 				38D62C7B23D7A89200649E08 /* SubjectAlertsDataRepository.swift in Sources */,
 				38843A4B23CB93B700CA620E /* CredentialsRemoteDataSource.swift in Sources */,
@@ -1422,6 +1449,7 @@
 				38843A2C23CB86F200CA620E /* CredentialsDataRepository.swift in Sources */,
 				38D956DE23D4CB5600A7E8DA /* Endpoints.swift in Sources */,
 				38D956D523D404CF00A7E8DA /* SubjectService.swift in Sources */,
+				3830D3D923DD1361004C73DB /* RacoAuthParameters.swift in Sources */,
 				38843A5923CBA45600CA620E /* AuthRequests.swift in Sources */,
 				38D956E023D4CD5500A7E8DA /* NetworkErrors.swift in Sources */,
 				38843A2423CB037600CA620E /* AuthUrls.swift in Sources */,

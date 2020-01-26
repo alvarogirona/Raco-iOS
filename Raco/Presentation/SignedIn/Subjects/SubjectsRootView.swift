@@ -33,7 +33,7 @@ class SubjectsRootView: NiblessView {
         
         hierarchyNotReady = false
 
-        backgroundColor = UIColor.systemBackground
+        backgroundColor = UIColor.systemGroupedBackground
 
         makeHierarchy()
         activateConstraints()

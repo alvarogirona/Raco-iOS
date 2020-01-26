@@ -25,4 +25,5 @@ struct SubjectClass {
 
 struct ScheduleSubject {
     let name: String
+    let id: Int
 }

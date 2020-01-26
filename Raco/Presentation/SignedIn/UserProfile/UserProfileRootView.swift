@@ -52,7 +52,7 @@ class UserProfileRootView: NiblessView {
 
         hierarchyNotReady = false
 
-        backgroundColor = .systemBackground
+        backgroundColor = UIColor.systemGroupedBackground
 
         makeHierarchy()
         activateConstraints()

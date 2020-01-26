@@ -11,14 +11,15 @@ import RacoDomain
 
 class ScheduleMapper {
     func map(schedule: [RemoteSchedule], subjects: [RemoteSubject]) -> [Int: [SubjectClass]] {
+
         let mappedSchedules = schedule
             .map { remoteSchedule -> SubjectClass? in
 
-                guard let subject = subjects.first (where: { $0.acronym == remoteSchedule.subjectCode }) else {
+                guard let subject = subjects.enumerated().first (where: { $0.element.acronym == remoteSchedule.subjectCode }) else {
                     return nil
                 }
 
-                return SubjectClass(subject: ScheduleSubject(name: subject.name),
+                return SubjectClass(subject: ScheduleSubject(name: subject.element.name, id: subject.offset),
                                     classType: remoteSchedule.type,
                                     startHour: remoteSchedule.startHour,
                                     duration: remoteSchedule.duration,

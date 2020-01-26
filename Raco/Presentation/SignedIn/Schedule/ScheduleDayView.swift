@@ -53,7 +53,7 @@ class ScheduleDayView: NiblessView {
 
         hierarchyNotReady = true
 
-        backgroundColor = UIColor.systemBackground
+        backgroundColor = UIColor.systemGroupedBackground
 
         makeHierarchy()
         activateConstraints()
