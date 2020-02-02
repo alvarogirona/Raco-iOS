@@ -10,7 +10,7 @@ import Foundation
 import RacoDomain
 import Alamofire
 
-public class PlatformDependencyContainer {
+public class PlatformDependencyContainer: PlatformDependencies {
 
     // MARK: - Submodules
     private let networkModule = NetworkModule()
@@ -140,6 +140,5 @@ public class PlatformDependencyContainer {
     public func makeGetAllSchedulesUseCase() -> GetAllSchedulesUseCase {
         return GetAllSchedulesUseCase(scheduleRepository: scheduleRepository)
     }
-
 
 }

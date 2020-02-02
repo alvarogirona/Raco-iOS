@@ -9,5 +9,9 @@
 import Foundation
 
 public struct RemoteUserProfile {
-    var name: String
+    public var name: String
+
+    public init (name: String) {
+        self.name = name
+    }
 }

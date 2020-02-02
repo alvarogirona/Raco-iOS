@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		380DE02323E60A8B002017F9 /* SubjectsMockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380DE02223E60A8B002017F9 /* SubjectsMockRepository.swift */; };
+		380DE02523E60BA6002017F9 /* SubjectAlertsMockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380DE02423E60BA6002017F9 /* SubjectAlertsMockRepository.swift */; };
+		380DE02723E60C9E002017F9 /* ScheduleMockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380DE02623E60C9E002017F9 /* ScheduleMockRepository.swift */; };
+		380DE02923E60CAB002017F9 /* UserProfileMockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380DE02823E60CAB002017F9 /* UserProfileMockRepository.swift */; };
+		380DE02B23E6115D002017F9 /* PlatformMockDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380DE02A23E6115D002017F9 /* PlatformMockDependencyContainer.swift */; };
+		380DE02D23E61168002017F9 /* PlatformDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380DE02C23E61168002017F9 /* PlatformDependencies.swift */; };
+		380DE02F23E77B92002017F9 /* CredentialsMockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380DE02E23E77B92002017F9 /* CredentialsMockRepository.swift */; };
 		382BBAF023D9005800D738F7 /* UserProfileDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382BBAEF23D9005800D738F7 /* UserProfileDataRepository.swift */; };
 		3830D3D023DD0FDC004C73DB /* SubjectColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3830D3CF23DD0FDC004C73DB /* SubjectColor.swift */; };
 		3830D3D323DD1206004C73DB /* SubjectAlertDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3830D3D223DD1206004C73DB /* SubjectAlertDetailViewController.swift */; };
@@ -90,6 +97,8 @@
 		38AA75E323D89615003599B8 /* GetAllSchedulesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75E223D89615003599B8 /* GetAllSchedulesUseCase.swift */; };
 		38AA75E523D8AFDC003599B8 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75E423D8AFDC003599B8 /* UserProfileViewModel.swift */; };
 		38AA75E823D8B1D3003599B8 /* GetUserProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA75E723D8B1D3003599B8 /* GetUserProfileUseCase.swift */; };
+		38C1396323DE54300028751A /* NiblessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C1396223DE54300028751A /* NiblessCollectionViewCell.swift */; };
+		38C1396523DE547D0028751A /* ScheduleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C1396423DE547D0028751A /* ScheduleCollectionViewCell.swift */; };
 		38D62C6E23D77ED300649E08 /* SubjectsAlertsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C6D23D77ED300649E08 /* SubjectsAlertsMapper.swift */; };
 		38D62C7123D77FAC00649E08 /* SubjectAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C7023D77FAC00649E08 /* SubjectAlerts.swift */; };
 		38D62C7323D7863D00649E08 /* GetAllSubjectsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D62C7223D7863D00649E08 /* GetAllSubjectsUseCase.swift */; };
@@ -124,6 +133,7 @@
 		38D956EA23D515A800A7E8DA /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956E923D515A800A7E8DA /* ScheduleViewController.swift */; };
 		38D956EC23D515BC00A7E8DA /* ScheduleDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956EB23D515BC00A7E8DA /* ScheduleDayView.swift */; };
 		38D956EE23D515C900A7E8DA /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D956ED23D515C900A7E8DA /* ScheduleViewModel.swift */; };
+		38EB659323DE142E00DA88FE /* ScheduleRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EB659223DE142E00DA88FE /* ScheduleRootView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +244,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		380DE02223E60A8B002017F9 /* SubjectsMockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsMockRepository.swift; sourceTree = "<group>"; };
+		380DE02423E60BA6002017F9 /* SubjectAlertsMockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlertsMockRepository.swift; sourceTree = "<group>"; };
+		380DE02623E60C9E002017F9 /* ScheduleMockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleMockRepository.swift; sourceTree = "<group>"; };
+		380DE02823E60CAB002017F9 /* UserProfileMockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileMockRepository.swift; sourceTree = "<group>"; };
+		380DE02A23E6115D002017F9 /* PlatformMockDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformMockDependencyContainer.swift; sourceTree = "<group>"; };
+		380DE02C23E61168002017F9 /* PlatformDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformDependencies.swift; sourceTree = "<group>"; };
+		380DE02E23E77B92002017F9 /* CredentialsMockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsMockRepository.swift; sourceTree = "<group>"; };
 		382BBAEF23D9005800D738F7 /* UserProfileDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileDataRepository.swift; sourceTree = "<group>"; };
 		3830D3CF23DD0FDC004C73DB /* SubjectColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectColor.swift; sourceTree = "<group>"; };
 		3830D3D223DD1206004C73DB /* SubjectAlertDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlertDetailViewController.swift; sourceTree = "<group>"; };
@@ -320,6 +337,8 @@
 		38AA75E223D89615003599B8 /* GetAllSchedulesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllSchedulesUseCase.swift; sourceTree = "<group>"; };
 		38AA75E423D8AFDC003599B8 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 		38AA75E723D8B1D3003599B8 /* GetUserProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserProfileUseCase.swift; sourceTree = "<group>"; };
+		38C1396223DE54300028751A /* NiblessCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessCollectionViewCell.swift; sourceTree = "<group>"; };
+		38C1396423DE547D0028751A /* ScheduleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCollectionViewCell.swift; sourceTree = "<group>"; };
 		38D62C6D23D77ED300649E08 /* SubjectsAlertsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsAlertsMapper.swift; sourceTree = "<group>"; };
 		38D62C7023D77FAC00649E08 /* SubjectAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectAlerts.swift; sourceTree = "<group>"; };
 		38D62C7223D7863D00649E08 /* GetAllSubjectsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllSubjectsUseCase.swift; sourceTree = "<group>"; };
@@ -351,6 +370,7 @@
 		38D956E923D515A800A7E8DA /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		38D956EB23D515BC00A7E8DA /* ScheduleDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDayView.swift; sourceTree = "<group>"; };
 		38D956ED23D515C900A7E8DA /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		38EB659223DE142E00DA88FE /* ScheduleRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -428,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				382BBAEF23D9005800D738F7 /* UserProfileDataRepository.swift */,
+				380DE02823E60CAB002017F9 /* UserProfileMockRepository.swift */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";
@@ -452,6 +473,7 @@
 		386346E723CBD2EA008D7C37 /* SignedIn */ = {
 			isa = PBXGroup;
 			children = (
+				38B5FB4023DE2AF2005C38C3 /* TestTemplate */,
 				38D956E823D5096000A7E8DA /* Schedule */,
 				386346FA23CC07D4008D7C37 /* Subjects */,
 				386346F923CC07C9008D7C37 /* SubjectsAlerts */,
@@ -560,6 +582,7 @@
 				3884399123CABB9200CA620E /* NiblessNavigationController.swift */,
 				386346F623CC0661008D7C37 /* NiblessTabBarController.swift */,
 				38D71BEE23D3D5AC00198F7B /* NiblessTableViewCell.swift */,
+				38C1396223DE54300028751A /* NiblessCollectionViewCell.swift */,
 			);
 			path = NiblessComponents;
 			sourceTree = "<group>";
@@ -769,6 +792,7 @@
 				38843A2B23CB86F200CA620E /* CredentialsDataRepository.swift */,
 				38843A2D23CB870900CA620E /* CredentiaslKeyChainDataSource.swift */,
 				38843A4A23CB93B700CA620E /* CredentialsRemoteDataSource.swift */,
+				380DE02E23E77B92002017F9 /* CredentialsMockRepository.swift */,
 			);
 			path = Credentials;
 			sourceTree = "<group>";
@@ -795,6 +819,8 @@
 			children = (
 				38843A4823CB92BE00CA620E /* PlatformDependencyContainer.swift */,
 				38D956D123D3FE3300A7E8DA /* NetworkModule.swift */,
+				380DE02A23E6115D002017F9 /* PlatformMockDependencyContainer.swift */,
+				380DE02C23E61168002017F9 /* PlatformDependencies.swift */,
 			);
 			path = DependencyInjection;
 			sourceTree = "<group>";
@@ -839,6 +865,7 @@
 				38AA75D723D88A6E003599B8 /* ScheduleDataRepository.swift */,
 				38AA75DB23D88D83003599B8 /* ScheduleRemoteDataSource.swift */,
 				38AA75DD23D88D8D003599B8 /* ScheduleCacheDataSource.swift */,
+				380DE02623E60C9E002017F9 /* ScheduleMockRepository.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -857,6 +884,21 @@
 				38AA75E723D8B1D3003599B8 /* GetUserProfileUseCase.swift */,
 			);
 			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		38B5FB4023DE2AF2005C38C3 /* TestTemplate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TestTemplate;
+			sourceTree = "<group>";
+		};
+		38C1396123DE54030028751A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				38C1396423DE547D0028751A /* ScheduleCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		38D62C6C23D77EC000649E08 /* Mappers */ = {
@@ -891,6 +933,7 @@
 				38D62C7A23D7A89200649E08 /* SubjectAlertsDataRepository.swift */,
 				38D62C7C23D7A90600649E08 /* SubjectAlertsRemoteDataSource.swift */,
 				38D62C7E23D7A91D00649E08 /* SubjectAlertsCacheDataSource.swift */,
+				380DE02423E60BA6002017F9 /* SubjectAlertsMockRepository.swift */,
 			);
 			path = SubjectAlerts;
 			sourceTree = "<group>";
@@ -925,6 +968,7 @@
 				38D956CB23D3F97400A7E8DA /* SubjectsDataRepository.swift */,
 				38D956CD23D3F99000A7E8DA /* SubjectsRemoteDataSource.swift */,
 				38D956D823D4076800A7E8DA /* SubjectsCacheDataSource.swift */,
+				380DE02223E60A8B002017F9 /* SubjectsMockRepository.swift */,
 			);
 			path = Subjects;
 			sourceTree = "<group>";
@@ -979,9 +1023,11 @@
 		38D956E823D5096000A7E8DA /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				38C1396123DE54030028751A /* Cell */,
 				38D956E923D515A800A7E8DA /* ScheduleViewController.swift */,
-				38D956EB23D515BC00A7E8DA /* ScheduleDayView.swift */,
 				38D956ED23D515C900A7E8DA /* ScheduleViewModel.swift */,
+				38EB659223DE142E00DA88FE /* ScheduleRootView.swift */,
+				38D956EB23D515BC00A7E8DA /* ScheduleDayView.swift */,
 				38AA75C823D85E05003599B8 /* ScheduleSubjectClassView.swift */,
 			);
 			path = Schedule;
@@ -1326,6 +1372,7 @@
 				3863470423CC0B85008D7C37 /* SubjectAlertsViewModel.swift in Sources */,
 				38D62C7123D77FAC00649E08 /* SubjectAlerts.swift in Sources */,
 				3884396A23CABA4600CA620E /* ViewController.swift in Sources */,
+				38C1396523DE547D0028751A /* ScheduleCollectionViewCell.swift in Sources */,
 				38D71BED23D3D59A00198F7B /* SubjectAlertTableViewCell.swift in Sources */,
 				38D956EE23D515C900A7E8DA /* ScheduleViewModel.swift in Sources */,
 				386346FE23CC0805008D7C37 /* SubjectsAlertsViewController.swift in Sources */,
@@ -1350,6 +1397,7 @@
 				388439E223CABEAB00CA620E /* LogInViewModel.swift in Sources */,
 				38D956E723D4EBB600A7E8DA /* SubjectTableViewCell.swift in Sources */,
 				388439E023CABE2A00CA620E /* LogInView.swift in Sources */,
+				38EB659323DE142E00DA88FE /* ScheduleRootView.swift in Sources */,
 				38AA75D523D888E5003599B8 /* SignedInDependenciesProvider.swift in Sources */,
 				38AA75D123D8880D003599B8 /* OnBoardingDependenciesProvider.swift in Sources */,
 				386346FC23CC07F9008D7C37 /* SubjectsViewController.swift in Sources */,
@@ -1374,6 +1422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38D71BEF23D3D5AC00198F7B /* NiblessTableViewCell.swift in Sources */,
+				38C1396323DE54300028751A /* NiblessCollectionViewCell.swift in Sources */,
 				388439F923CAC2D400CA620E /* UIView+GradientBackground.swift in Sources */,
 				386346F723CC0661008D7C37 /* NiblessTabBarController.swift in Sources */,
 				38D62C8423D7DEB400649E08 /* StackView+removeAllArrangedSubviews.swift in Sources */,
@@ -1428,8 +1477,13 @@
 				38D62C7D23D7A90600649E08 /* SubjectAlertsRemoteDataSource.swift in Sources */,
 				38AA75DC23D88D83003599B8 /* ScheduleRemoteDataSource.swift in Sources */,
 				38D62C7F23D7A91D00649E08 /* SubjectAlertsCacheDataSource.swift in Sources */,
+				380DE02923E60CAB002017F9 /* UserProfileMockRepository.swift in Sources */,
+				380DE02523E60BA6002017F9 /* SubjectAlertsMockRepository.swift in Sources */,
+				380DE02723E60C9E002017F9 /* ScheduleMockRepository.swift in Sources */,
 				38843A4023CB8EB300CA620E /* KeyChainDataSource.swift in Sources */,
+				380DE02323E60A8B002017F9 /* SubjectsMockRepository.swift in Sources */,
 				38D956D923D4076800A7E8DA /* SubjectsCacheDataSource.swift in Sources */,
+				380DE02B23E6115D002017F9 /* PlatformMockDependencyContainer.swift in Sources */,
 				38AA75E023D8931B003599B8 /* ScheduleResponse.swift in Sources */,
 				38843A3E23CB8E3F00CA620E /* RemoteDataSource.swift in Sources */,
 				38D956E223D4D64400A7E8DA /* SubjectsResponse.swift in Sources */,
@@ -1443,6 +1497,7 @@
 				38D956CC23D3F97400A7E8DA /* SubjectsDataRepository.swift in Sources */,
 				38843A5623CBA34F00CA620E /* AuthedSessionManager.swift in Sources */,
 				38D62C7B23D7A89200649E08 /* SubjectAlertsDataRepository.swift in Sources */,
+				380DE02D23E61168002017F9 /* PlatformDependencies.swift in Sources */,
 				38843A4B23CB93B700CA620E /* CredentialsRemoteDataSource.swift in Sources */,
 				38AA75D823D88A6E003599B8 /* ScheduleDataRepository.swift in Sources */,
 				38D956CE23D3F99000A7E8DA /* SubjectsRemoteDataSource.swift in Sources */,
@@ -1453,6 +1508,7 @@
 				38843A5923CBA45600CA620E /* AuthRequests.swift in Sources */,
 				38D956E023D4CD5500A7E8DA /* NetworkErrors.swift in Sources */,
 				38843A2423CB037600CA620E /* AuthUrls.swift in Sources */,
+				380DE02F23E77B92002017F9 /* CredentialsMockRepository.swift in Sources */,
 				38AA75DE23D88D8D003599B8 /* ScheduleCacheDataSource.swift in Sources */,
 				38D956D223D3FE3300A7E8DA /* NetworkModule.swift in Sources */,
 				38843A2E23CB870900CA620E /* CredentiaslKeyChainDataSource.swift in Sources */,

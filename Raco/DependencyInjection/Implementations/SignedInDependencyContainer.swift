@@ -12,9 +12,9 @@ import UIKit
 
 class SignedInDependencyContainer: SignedInDependenciesProvider {
 
-    let platformDependencyContainer: PlatformDependencyContainer
+    let platformDependencyContainer: PlatformDependencies
 
-    init (platformDependencyContainer: PlatformDependencyContainer) {
+    init (platformDependencyContainer: PlatformDependencies) {
         self.platformDependencyContainer = platformDependencyContainer
     }
 

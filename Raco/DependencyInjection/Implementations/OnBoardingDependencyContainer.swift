@@ -15,7 +15,11 @@ class OnBoardingDependencyContainer: OnBoardingDependenciesProvider, SignedInVie
 
     let authorizationCodeSubject: PublishSubject<String> = PublishSubject()
 
+    #if DEBUG
+    private let platformDependencyContainer = PlatformMockDependencyContainer()
+    #else
     private let platformDependencyContainer = PlatformDependencyContainer()
+    #endif
 
     private lazy var signedInDependencyContainer = SignedInDependencyContainer(
         platformDependencyContainer: self.platformDependencyContainer

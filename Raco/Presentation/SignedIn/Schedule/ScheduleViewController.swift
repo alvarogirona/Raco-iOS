@@ -10,12 +10,14 @@ import UIKit
 import RacoDomain
 import RxSwift
 
-class ScheduleViewController<T: UseCase, R: UseCase>: NiblessViewController
+class ScheduleViewController<T: UseCase, R: UseCase>: NiblessViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 where T.Resource == [RemoteSubject], R.Resource == [RemoteSchedule] {
 
     private let viewModel: ScheduleViewModel<T, R>
 
+    private let scheduleRootView: ScheduleRootView
     private let scheduleDayView: ScheduleDayView
+    private var classes: [Int: [SubjectClass]] = [:]
 
     private let disposeBag = DisposeBag()
 
@@ -27,22 +29,63 @@ where T.Resource == [RemoteSubject], R.Resource == [RemoteSchedule] {
 
     init (viewModel: ScheduleViewModel<T, R>) {
         self.viewModel = viewModel
-        let scheduleDayView = ScheduleDayView()
-        self.scheduleDayView = scheduleDayView
+        self.scheduleDayView = ScheduleDayView()
+        self.scheduleRootView = ScheduleRootView()
 
         super.init()
 
-        scheduleDayView.frame = view.frame
-        view.addSubview(scheduleDayView)
+        scheduleRootView.frame = view.frame
+        view.addSubview(scheduleRootView)
 
+        configureCollectionView()
         bindViewModel()
+    }
+
+    private func configureCollectionView() {
+        scheduleRootView.schedulesCollectionView.register(ScheduleCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        scheduleRootView.schedulesCollectionView.delegate = self
+        scheduleRootView.schedulesCollectionView.dataSource = self
     }
 
     private func bindViewModel() {
         viewModel.schedulesSubject
-            .subscribeOn(MainScheduler.asyncInstance)
+            .observeOn(MainScheduler.asyncInstance)
             .subscribe(onNext: { [unowned self] (classes) in
-                self.scheduleDayView.render(schedule: classes)
+                self.classes = classes
+                self.scheduleRootView.schedulesCollectionView.reloadData()
             }).disposed(by: disposeBag)
+    }
+
+    // MARK: - UICollectionView
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        numberOfItemsInSection section: Int
+    ) -> Int {
+        return classes.count
+    }
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "cell",
+            for: indexPath) as! ScheduleCollectionViewCell
+
+        cell.scheduleView.render(schedule: classes[indexPath.item] ?? [])
+
+        cell.setNeedsLayout()
+        cell.layoutIfNeeded()
+
+        return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        return CGSize(
+            width: scheduleRootView.schedulesCollectionView.bounds.width,
+            height: scheduleRootView.schedulesCollectionView.bounds.height
+        )
     }
 }

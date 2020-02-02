@@ -47,7 +47,9 @@ class SubjectsViewModel {
 
         self.subjectsRepository
             .getAll()
-            .subscribe (onNext: { [unowned self] in self.subjectsSubject.onNext($0)})
+            .subscribe (onNext: { [unowned self] in
+                self.subjectsSubject.onNext($0)
+            })
             .disposed(by: disposeBag)
     }
 }

@@ -67,7 +67,6 @@ class ScheduleDayView: NiblessView {
     private func activateConstraints() {
         activateScrollViewConstraints()
         activateStackViewContraints()
-        layoutIfNeeded()
     }
 
     private func activateScrollViewConstraints() {
@@ -108,12 +107,8 @@ class ScheduleDayView: NiblessView {
 
         schedule.forEach { ( subjectClass) in
             let view = createClassView(subjectClass: subjectClass)
-            view.backgroundColor = UIColor.systemGreen
             stackView.addArrangedSubview(view)
         }
-
-        stackView.setNeedsLayout()
-        stackView.layoutIfNeeded()
 
         scrollView.contentSize = stackView.bounds.size
     }
@@ -127,7 +122,7 @@ class ScheduleDayView: NiblessView {
         view.layer.cornerRadius = 15.0
         view.layer.masksToBounds = true
 
-        let height = view.heightAnchor.constraint(equalToConstant: 75)
+        let height = view.heightAnchor.constraint(equalToConstant: 90)
 
         NSLayoutConstraint.activate([height])
 

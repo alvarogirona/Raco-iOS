@@ -17,6 +17,24 @@ public struct RemoteSchedule: Codable {
     public let type: String
     public let classroom: String
 
+    public init(
+        subjectCode: String,
+        group: String,
+        weekDay: Int,
+        startHour: String,
+        duration: Int,
+        type: String,
+        classroom: String
+    ) {
+        self.subjectCode = subjectCode
+        self.group = group
+        self.weekDay = weekDay
+        self.startHour = startHour
+        self.duration = duration
+        self.type = type
+        self.classroom = classroom
+    }
+
     enum CodingKeys: String, CodingKey {
         case subjectCode = "codi_assig"
         case group = "grup"

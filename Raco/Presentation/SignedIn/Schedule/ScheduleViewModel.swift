@@ -14,7 +14,7 @@ class ScheduleViewModel<T: UseCase, R: UseCase>
 where T.Resource == [RemoteSubject], R.Resource == [RemoteSchedule] {
 
     // View state
-    let schedulesSubject: BehaviorSubject<[SubjectClass]> = BehaviorSubject(value: [])
+    let schedulesSubject: BehaviorSubject<[Int: [SubjectClass]]> = BehaviorSubject(value: [:])
 
     // Dependencies
     private let getAllSubjectsUseCase: T
@@ -61,8 +61,7 @@ where T.Resource == [RemoteSubject], R.Resource == [RemoteSchedule] {
     private func mapSchedules() {
         let mappedSchedules = mapper.map(schedule: remoteSchedules, subjects: remoteSubjects)
 
-        schedulesSubject.onNext(mappedSchedules[1] ?? [])
+        schedulesSubject.onNext(mappedSchedules)
     }
-
 
 }
